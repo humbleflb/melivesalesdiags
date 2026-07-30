@@ -1,6 +1,6 @@
-# Diagnóstico Café Jaguari — Melive
+# Diagnóstico Vinta Software — Melive
 
-Projeto-fonte da página de diagnóstico criada para a Café Jaguari.
+Projeto-fonte da página de diagnóstico criada para a Vinta Software.
 
 ## Abrir no Cursor
 
@@ -14,6 +14,20 @@ npm run dev
 ```
 
 4. Abra o endereço local exibido no terminal.
+
+## Deploy (Netlify)
+
+O projeto usa vinext + Nitro. No Netlify:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node: `22`
+
+Configuração já está em `netlify.toml`. Build local:
+
+```bash
+npm run build
+```
 
 ## Arquivos principais
 

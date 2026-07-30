@@ -1,0 +1,17 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--include=dev"
+  # This is vinext + Nitro, not Next.js. Netlify may auto-enable
+  # @netlify/plugin-nextjs (UI) because of the `next` dependency; skip it.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+# Nitro writes the SSR handler under .netlify/functions-internal/ during build.
+# Static files in dist/ are served first; unmatched routes hit the server function.
+#
+# Do NOT add [[plugins]] package = "@netlify/plugin-nextjs".
+# Also uninstall that plugin in Netlify UI if present:
+# Site configuration → Build & deploy → Build plugins.

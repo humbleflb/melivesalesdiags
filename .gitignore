@@ -36,7 +36,10 @@ yarn-error.log*
 # typescript
 next-env.d.ts
 /dist/
+/.output/
+/.netlify/
 /.wrangler/
 /.sites-runtime/
+/.vinext/
 /outputs/
 /work/
