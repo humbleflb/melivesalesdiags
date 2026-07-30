@@ -2,21 +2,27 @@
 
 ## Cursor Cloud specific instructions
 
-This is a single-app vinext (Next.js-on-Vite) diagnostic landing page for Café Jaguari / Melive. No Docker, database server, or compose stack is required for local development.
+Single-app vinext (Next.js-on-Vite) diagnostic landing page for Café Jaguari / Melive. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
 
 ### Commands
 
-See `README.md` / `package.json` for the standard scripts. In practice:
+See `package.json` / `README-CURSOR.md`. In practice:
 
-- **Dev:** `npm run dev` → Vite/Vinext on `http://localhost:5173/` (binds `0.0.0.0`)
-- **Lint:** `npm run lint` (may report existing `@next/next/no-img-element` warnings in `app/page.tsx`)
-- **Test:** `npm test` runs a bounded `vinext build` then `tests/rendered-html.test.mjs`
-- **Build-only:** `npm run build`
+- **Dev:** `npm run dev` → `http://localhost:5173/` (`0.0.0.0`)
+- **Lint:** `npm run lint` (existing `@next/next/no-img-element` warnings in `app/page.tsx` are OK)
+- **Build (Netlify):** `npm run build` → sets `NITRO_PRESET=netlify` locally; on Netlify CI Nitro auto-detects
+- **Local Node prod smoke:** `npm start` rebuilds with `NITRO_PRESET=node` and runs `.output/server/index.mjs` (`vite preview` does not work with the Netlify preset)
+- **Test:** `npm test` = Netlify build + `tests/netlify-build.test.mjs`
+
+### Netlify
+
+- Config: `netlify.toml` — build `npm run build`, publish `dist`, Node 22
+- Nitro emits serverless functions under `.netlify/functions-internal/` (gitignored; created at build time)
+- Do **not** use the Cloudflare/`vinext deploy` path for this project
 
 ### Gotchas
 
-- `vite.config.ts` requires `.openai/hosting.json` and `build/sites-vite-plugin.ts`. If either is missing, Vite fails before the server starts.
-- `scripts/*.sh` must be executable (`chmod +x scripts/*.sh`). `npm run build` / `lint` / `test` call them directly.
-- D1/R2 are optional and currently unset in `.openai/hosting.json`. Local Miniflare bindings are only created when those fields are non-null.
-- `.sites-runtime/` and `.wrangler/` are disposable local state (gitignored). `.vinext/fonts/` may appear after first build/dev — treat as generated.
-- Do not use `npm run install:ci` for day-to-day local work; prefer `npm install`. `install:ci` is the Sites CI lockfile helper (flock/timeout/prefer-offline).
+- `vite.config.ts` uses `@tailwindcss/vite` + `vinext` + `nitro`. Tailwind via PostCSS-only (`@import "tailwindcss"` without the Vite plugin) fails under the Nitro CSS pipeline.
+- `scripts/*.sh` must be executable.
+- `.sites-runtime/`, `.wrangler/`, `.vinext/`, `.netlify/`, `.output/`, `dist/` are disposable/generated.
+- Prefer `npm install` over `npm run install:ci` for day-to-day work.

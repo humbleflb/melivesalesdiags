@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--include=dev"
+
+# Nitro writes the SSR handler under .netlify/functions-internal/ during build.
+# Static files in dist/ are served first; unmatched routes hit the server function.
