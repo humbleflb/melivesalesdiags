@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Café Jaguari — Melive",
+  title: "Diagnóstico Vinta Software — Melive",
   description:
-    "Diagnóstico preliminar de conversão da jornada digital da Café Jaguari.",
+    "Diagnóstico preliminar da jornada digital B2B da Vinta Software.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

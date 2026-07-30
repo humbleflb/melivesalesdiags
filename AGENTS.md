@@ -2,7 +2,7 @@
 
 ## Cursor Cloud specific instructions
 
-Single-app vinext (Next.js-on-Vite) diagnostic landing page for Café Jaguari / Melive. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
+Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Vinta Software** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). **Production target: Netlify** via Nitro. No Docker/DB server required locally.
 
 ### Commands
 

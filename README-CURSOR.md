@@ -1,6 +1,6 @@
-# Diagnóstico Café Jaguari — Melive
+# Diagnóstico Vinta Software — Melive
 
-Projeto-fonte da página de diagnóstico criada para a Café Jaguari.
+Projeto-fonte da página de diagnóstico criada para a Vinta Software.
 
 ## Abrir no Cursor
 

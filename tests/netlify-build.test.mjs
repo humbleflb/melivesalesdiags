@@ -42,3 +42,11 @@ test("ships Melive static assets in dist/", async () => {
   assert.equal(await exists("dist/melive-logo.png"), true);
   assert.equal(await exists("dist/favicon.svg"), true);
 });
+
+test("rendered page copy targets Vinta Software", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const page = await readFile(path.join(root, "app/page.tsx"), "utf8");
+  assert.match(page, /Vinta Software/);
+  assert.match(page, /Healthcare Product Readiness Review/);
+  assert.doesNotMatch(page, /Café Jaguari/);
+});
