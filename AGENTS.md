@@ -18,6 +18,7 @@ See `package.json` / `README-CURSOR.md`. In practice:
 
 - Config: `netlify.toml` — build `npm run build`, publish `dist`, Node 22
 - Nitro emits serverless functions under `.netlify/functions-internal/` (gitignored; created at build time)
+- Do **not** use `@netlify/plugin-nextjs` (UI or toml). This app is vinext/Nitro; that plugin looks for `.next` and fails. `NETLIFY_NEXT_PLUGIN_SKIP=true` is set in `netlify.toml`; also uninstall the plugin in Netlify UI if it was auto-enabled.
 - Do **not** use the Cloudflare/`vinext deploy` path for this project
 
 ### Gotchas
