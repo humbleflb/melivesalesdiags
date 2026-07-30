@@ -75,6 +75,16 @@ h1, h2, h3, .section-index, .opportunity-head, .button {
 .button:hover { transform: translateY(-2px); box-shadow: 0 8px 0 rgba(47,47,48,.16); }
 .button.dark { background: var(--ink); color: var(--cream); }
 .button.cream { background: var(--cream); color: var(--ink); }
+.whatsapp-cta-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
 .hero-actions p { font-size: 12px; line-height: 1.4; text-transform: uppercase; letter-spacing: .08em; }
 .hero-actions p b { font-size: 28px; float: left; margin-right: 10px; line-height: 1; }
 .hero-stamp {
