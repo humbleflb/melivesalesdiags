@@ -4,11 +4,11 @@ const opportunities = [
     label: "Entrada",
     title: "Orientar a entrada pelo desafio do comprador",
     observation:
-      "A home apresenta dois grandes caminhos — Healthcare Development e End-to-end Development — e, ao avançar, o comprador encontra EHR, Medplum, interoperabilidade, Product Discovery, AI, modernização de legado, equipes dedicadas, Python, JavaScript e outras especialidades. A amplitude demonstra capacidade, mas aumenta o esforço para quem conhece o problema e ainda não sabe qual serviço contratar.",
+      "A home apresenta dois grandes caminhos: Healthcare Development e End-to-end Development. Depois, o comprador encontra EHR, Medplum, interoperabilidade, Product Discovery, AI, modernização de legado, equipes dedicadas e várias stacks. A amplitude mostra capacidade. Também aumenta o esforço para quem conhece o problema, mas ainda não sabe o que contratar.",
     hypothesis:
-      "Organizar a entrada por cenário de negócio — e não apenas por serviço ou tecnologia — pode ajudar o visitante a se reconhecer mais rapidamente.",
+      "Se a entrada for organizada por cenário de negócio, e não só por serviço ou tecnologia, o visitante se reconhece mais rápido e avança com menos fricção.",
     recommendation:
-      "Criar uma jornada guiada com três perguntas: o que a empresa está construindo, em qual estágio o projeto se encontra e qual é o principal bloqueio atual. Ao final, entregar caminho recomendado, serviço aderente, case semelhante e próximo passo específico.",
+      "Criar uma jornada guiada em três perguntas: o que a empresa está construindo, em qual estágio o projeto está e qual é o principal bloqueio. No fim, entregar o caminho recomendado, o serviço mais aderente, um case semelhante e um próximo passo claro.",
     metrics: [
       "Clareza da oferta",
       "Acessos às páginas certas",
@@ -24,11 +24,11 @@ const opportunities = [
     label: "Aquisição",
     title: "Criar uma oferta intermediária de aquisição",
     observation:
-      "A página de contato funciona bem para quem já está pronto: agendamento direto ou formulário com telefone, origem, investimento esperado e descrição do projeto. Isso qualifica alta intenção, mas deixa lacuna para quem reconhece um problema técnico e ainda não está pronto para informar orçamento ou marcar reunião — mesmo com ativos como os Building Blocks FHIR-native já comunicados publicamente.",
+      "A página de contato funciona bem para quem já está pronto: agendamento direto ou formulário com telefone, origem, investimento e descrição do projeto. Isso qualifica alta intenção. Ainda assim, falta um degrau para quem já viu o problema técnico e ainda não quer informar orçamento ou marcar reunião. A Vinta já comunica ativos valiosos para essa etapa, como os Building Blocks FHIR-native.",
     hypothesis:
-      "Transformar parte desse conhecimento em um diagnóstico pode criar uma entrada menos exigente e, ao mesmo tempo, qualificar melhor a oportunidade.",
+      "Se parte desse conhecimento virar um diagnóstico inicial, a entrada fica menos exigente e a oportunidade chega mais qualificada para o comercial.",
     recommendation:
-      "Lançar o Healthcare Product Readiness Review: “Descubra os principais riscos técnicos e operacionais antes de avançar seu produto para produção.” Avaliar estágio, arquitetura, interoperabilidade, fluxos clínicos, segurança, capacidade interna e risco de escala — com maturidade, riscos, próximo passo e case relacionado.",
+      "Lançar o Healthcare Product Readiness Review com a promessa: descubra os principais riscos técnicos e operacionais antes de levar o produto para produção. Avaliar estágio, arquitetura, interoperabilidade, fluxos clínicos, segurança, capacidade interna e risco de escala. Entregar maturidade, riscos, próximo passo e um case relacionado.",
     metrics: [
       "Demanda pré-reunião",
       "Leads contextualizados",
@@ -44,11 +44,11 @@ const opportunities = [
     label: "Prova",
     title: "Transformar os cases em uma jornada de decisão",
     observation:
-      "A biblioteca de cases é especialmente forte: EHR, Medplum, hospital operations, behavioral health, chronic disease, AI e product discovery. Alguns já mostram resultados concretos, como protótipo validado e escopo de MVP definido em duas semanas. O ativo existe, mas o visitante ainda precisa decidir sozinho qual case prova o seu contexto.",
+      "A biblioteca de cases é especialmente forte: EHR, Medplum, hospital operations, behavioral health, chronic disease, AI e product discovery. Alguns já mostram resultado concreto, como protótipo validado e escopo de MVP definido em duas semanas. O ativo existe. O visitante, porém, ainda precisa decidir sozinho qual case prova o próprio contexto.",
     hypothesis:
-      "Contextualizar os cases por problema, estágio e perfil do decisor pode aproximar a prova técnica da decisão comercial.",
+      "Se os cases forem organizados por problema, estágio e perfil do decisor, a prova técnica chega mais perto da decisão comercial.",
     recommendation:
-      "Criar trilhas por perfil — CTO, Product Leader, Healthcare Operations e Founder — reunindo problema reconhecível, case relacionado, resultado mensurável, abordagem e CTA coerente. Transformar resultados em chamadas objetivas como “MVP validado em duas semanas” ou “Do protótipo ao roadmap de produção”.",
+      "Criar trilhas para CTO, Product Leader, Healthcare Operations e Founder. Em cada trilha, reunir um problema reconhecível, um case relacionado, um resultado mensurável, a abordagem usada e um CTA coerente com o estágio. Traduzir resultados em chamadas objetivas, como “MVP validado em duas semanas” ou “Do protótipo ao roadmap de produção”.",
     metrics: [
       "Consumo dos cases",
       "Autoridade percebida",
@@ -124,8 +124,8 @@ export default function Home() {
           <p className="eyebrow"><span>Diagnóstico da jornada B2B</span> Vinta Software</p>
           <h1>Menos esforço para se reconhecer.<br /><strong>Mais clareza para decidir.</strong></h1>
           <p className="hero-lead">
-            Uma análise preliminar da experiência pública do site, serviços e cases
-            para conduzir o comprador do desafio técnico até o próximo passo certo.
+            Uma leitura da experiência pública do site, dos serviços e dos cases
+            para ajudar o comprador a sair do desafio técnico e chegar ao próximo passo certo.
           </p>
           <div className="hero-actions">
             <a className="button dark" href="#diagnostico">Ver oportunidades <span>↓</span></a>
@@ -145,17 +145,17 @@ export default function Home() {
           <h2>A base já é sólida.<br />A oportunidade está<br /><em>na jornada.</em></h2>
           <div className="summary-copy">
             <p>
-              A Vinta já reúne profundidade técnica, especialização crescente em
-              healthcare, cases com United Nations, Unilever, Quilted Health e Rewind,
-              nota 4,9 no Clutch e conteúdo frequente sobre EHR, FHIR e Medplum.
+              A Vinta já tem profundidade técnica, especialização crescente em healthcare,
+              cases com United Nations, Unilever, Quilted Health e Rewind, nota 4,9 no Clutch
+              e conteúdo frequente sobre EHR, FHIR e Medplum.
             </p>
             <blockquote>
-              O comprador ainda precisa interpretar sozinho qual capacidade da Vinta
-              corresponde ao seu desafio — e qual é o melhor próximo passo.
+              O comprador ainda precisa descobrir sozinho qual capacidade da Vinta
+              responde ao seu desafio e qual deve ser o próximo passo.
             </blockquote>
             <p className="method-note">
-              Leitura heurística da experiência externa, sem acesso a tráfego, CRM ou
-              conversões internas. As hipóteses devem ser confrontadas com dados reais.
+              Esta é uma leitura heurística da experiência externa, sem acesso a tráfego,
+              CRM ou conversões internas. As hipóteses precisam ser confrontadas com dados reais.
             </p>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function Home() {
 
       <section className="opportunity-section">
         <div className="section intro-section">
-          <div className="section-index light">01—03 / OPORTUNIDADES</div>
+          <div className="section-index light">01 a 03 / OPORTUNIDADES</div>
           <h2>Três ajustes com potencial<br />de destravar a conversão.</h2>
           <p>Achados observáveis, hipóteses responsáveis e testes possíveis.</p>
         </div>
@@ -212,20 +212,20 @@ export default function Home() {
         </div>
         <div className="split-copy">
           <p>
-            A combinação mais promissora une as três frentes: o visitante identifica
-            o desafio, recebe uma avaliação inicial, visualiza uma prova semelhante
+            O movimento mais forte une as três frentes em sequência. O visitante
+            identifica o desafio, recebe uma avaliação inicial, vê uma prova semelhante
             e chega ao comercial com contexto.
           </p>
           <div className="journeys">
             <article>
-              <small>RECONHECER → ORIENTAR</small>
-              <h3>Cenário → jornada guiada</h3>
+              <small>RECONHECER E ORIENTAR</small>
+              <h3>Do cenário à jornada guiada</h3>
               <p>Entrada por desafio de negócio, não só por stack ou serviço.</p>
             </article>
             <article>
-              <small>AVALIAR → CONVERTER</small>
-              <h3>Diagnóstico → case → contato</h3>
-              <p>Maturidade, prova aderente e conversa comercial contextualizada.</p>
+              <small>AVALIAR E CONVERTER</small>
+              <h3>Do diagnóstico ao contato</h3>
+              <p>Maturidade, prova aderente e conversa comercial com contexto.</p>
             </article>
           </div>
         </div>
@@ -263,21 +263,22 @@ export default function Home() {
       <section className="next-section" id="proximos-passos">
         <div className="next-shape" aria-hidden="true" />
         <div className="next-copy">
-          <div className="section-index">PRÓXIMO PASSO</div>
-          <h2>Validar antes<br />de escalar.</h2>
+          <div className="section-index">COMO A MELIVE ENTRA</div>
+          <h2>Do diagnóstico<br />à execução.</h2>
           <p>
-            O primeiro teste sugerido é o Healthcare Product Readiness Review,
-            para healthtechs com protótipos, modernização ou dificuldade de chegar
-            a uma arquitetura pronta para produção — tese que a própria Vinta já comunica.
+            A Vinta já tem reputação, conteúdo e especialização. A Melive entra para
+            transformar essas oportunidades em jornada: desenhar a entrada por desafio,
+            estruturar o Readiness Review, organizar os cases para decisão e medir
+            o que realmente move o comercial.
           </p>
           <ol>
-            <li><span>01</span> Confrontar hipóteses com origem de leads e conversão por página</li>
-            <li><span>02</span> Lançar o Readiness Review como oferta intermediária</li>
-            <li><span>03</span> Medir uso dos cases, abandono do formulário e tempo até reunião</li>
+            <li><span>01</span> Priorizar o primeiro teste com base nos dados da operação</li>
+            <li><span>02</span> Construir a oferta intermediária e a narrativa da jornada</li>
+            <li><span>03</span> Acompanhar conversão, abandono e tempo até a reunião</li>
           </ol>
           <a
             className="button cream whatsapp-cta"
-            href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20sobre%20o%20diagn%C3%B3stico%20da%20Vinta%20Software."
+            href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Melive%20sobre%20como%20executar%20o%20diagn%C3%B3stico%20da%20Vinta%20Software."
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -293,14 +294,14 @@ export default function Home() {
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
                 />
               </svg>
-              Conversar sobre o diagnóstico
+              Conversar com a Melive
             </span>
             <span aria-hidden="true">↗</span>
           </a>
         </div>
         <div className="next-mark">
           <img src="/melive-logo.png" alt="" />
-          <p>Conteúdo, reputação<br />e especialização conduzindo a decisão.</p>
+          <p>Da hipótese à jornada<br />que o comercial consegue usar.</p>
         </div>
       </section>
 
