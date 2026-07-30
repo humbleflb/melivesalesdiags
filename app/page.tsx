@@ -118,17 +118,6 @@ function MiniAudit({ type }: { type: string }) {
 export default function Home() {
   return (
     <main>
-      <header className="topbar">
-        <a className="brand" href="#inicio" aria-label="Melive — início">
-          <img src="/melive-logo.png" alt="Melive" />
-        </a>
-        <nav aria-label="Navegação do diagnóstico">
-          <a href="#diagnostico">Diagnóstico</a>
-          <a href="#prioridades">Prioridades</a>
-          <a className="nav-cta" href="#proximos-passos">Próximos passos</a>
-        </nav>
-      </header>
-
       <section className="hero" id="inicio">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">

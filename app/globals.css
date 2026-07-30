@@ -21,29 +21,6 @@ body {
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 
-.topbar {
-  width: 100%;
-  min-height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px clamp(24px, 5vw, 76px);
-  background: var(--paper);
-  border-bottom: 1px solid rgba(47,47,48,.16);
-  position: relative;
-  z-index: 10;
-}
-.brand img { width: 78px; height: 62px; object-fit: contain; }
-.topbar nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 46px); }
-.topbar nav a {
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
-.topbar nav a:not(.nav-cta):hover { color: var(--green); }
-.nav-cta { background: var(--ink); color: var(--cream); padding: 13px 18px; border-radius: 3px; }
-
 .hero {
   min-height: 690px;
   padding: clamp(64px, 9vw, 128px) clamp(24px, 8vw, 120px);
@@ -253,10 +230,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 
 @media (max-width: 650px) {
-  .topbar { min-height: 74px; }
-  .brand img { width: 58px; height: 46px; }
-  .topbar nav a:not(.nav-cta) { display: none; }
-  .nav-cta { padding: 10px 12px !important; font-size: 10px !important; }
   .hero { padding-top: 72px; padding-bottom: 92px; }
   .eyebrow { align-items: flex-start; flex-direction: column; }
   .hero h1 { font-size: clamp(50px, 16vw, 72px); }
@@ -288,7 +261,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 
 @media print {
-  .topbar { position: static; }
   .button { border: 1px solid currentColor; }
   .opportunity { break-inside: avoid; }
 }
