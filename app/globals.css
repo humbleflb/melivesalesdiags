@@ -699,31 +699,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .proposta .slide-close .whatsapp-cta { margin-top: 8px; }
 
-.proposta-nav {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 40;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  max-width: min(420px, calc(100vw - 36px));
-}
-.proposta-nav a {
-  background: var(--ink);
-  color: var(--cream);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  padding: 10px 12px;
-  border-radius: 2px;
-  opacity: .92;
-  transition: transform .2s, background .2s;
-}
-.proposta-nav a:hover { transform: translateY(-2px); background: var(--green); }
-
 @keyframes proposta-drift {
   from { transform: rotate(-8deg) translateX(0); }
   to { transform: rotate(-5deg) translateX(24px); }
@@ -761,8 +736,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .proposta .cover-brand img { width: 88px; }
   .proposta .big-number { font-size: 96px; }
   .proposta .price { font-size: 72px; }
-  .proposta-nav { left: 18px; right: 18px; justify-content: stretch; }
-  .proposta-nav a { flex: 1 1 calc(50% - 8px); text-align: center; }
   .proposta .slide-next { display: none; }
 }
 
