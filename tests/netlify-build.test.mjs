@@ -51,3 +51,16 @@ test("rendered page copy targets Zetti", async () => {
   assert.doesNotMatch(page, /Vinta Software/);
   assert.doesNotMatch(page, /Café Jaguari/);
 });
+
+test("ships commercial proposal route for Melive + Zetti", async () => {
+  const { readFile } = await import("node:fs/promises");
+  const proposal = await readFile(
+    path.join(root, "app/proposta/page.tsx"),
+    "utf8",
+  );
+  assert.match(proposal, /Proposta comercial/);
+  assert.match(proposal, /R\$\s*7\.800/);
+  assert.match(proposal, /Landing Page Estratégica/);
+  assert.match(proposal, /Melive/);
+  assert.match(proposal, /Zetti/);
+});
