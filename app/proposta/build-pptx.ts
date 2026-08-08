@@ -75,6 +75,12 @@ const THEME: Record<
 
 export const PPTX_FILENAME = "proposta-melive-zetti.pptx";
 
+/** Match Melive web typography: Impact for display, Arial for body. */
+const FONT = {
+  display: "Impact",
+  body: "Arial",
+} as const;
+
 function headlineRuns(
   parts: TextPart[],
   theme: (typeof THEME)[SlideTheme],
@@ -84,7 +90,7 @@ function headlineRuns(
     text: `${index > 0 && part.strong ? "\n" : ""}${part.text}`,
     options: {
       fontSize: opts.fontSize,
-      fontFace: "Arial",
+      fontFace: FONT.display,
       bold: true,
       color: part.strong
         ? theme.bg === COLORS.yellow
@@ -117,7 +123,7 @@ function addIndex(
     w: 8.5,
     h: 0.35,
     fontSize: 11,
-    fontFace: "Arial",
+    fontFace: FONT.display,
     bold: true,
     color: theme.fg,
     charSpacing: 4,
@@ -149,7 +155,7 @@ function addQuote(
     w: box.w - 0.4,
     h: box.h - 0.3,
     fontSize: 14,
-    fontFace: "Arial",
+    fontFace: FONT.body,
     bold: true,
     color: theme.bg === COLORS.ink || theme.bg === COLORS.green ? COLORS.cream : COLORS.ink,
     valign: "middle",
@@ -181,7 +187,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
               color: COLORS.cream,
               fontSize: 11,
               bold: true,
-              fontFace: "Arial",
+              fontFace: FONT.display,
             },
           },
           {
@@ -190,7 +196,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
               color: COLORS.ink,
               fontSize: 11,
               bold: true,
-              fontFace: "Arial",
+              fontFace: FONT.display,
             },
           },
         ],
@@ -209,7 +215,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 7.5,
         h: 1.1,
         fontSize: 16,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       if (data.layout === "close") {
@@ -219,7 +225,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 8,
           h: 0.4,
           fontSize: 12,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           bold: true,
           color: theme.fg,
         });
@@ -230,7 +236,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 8,
         h: 0.35,
         fontSize: 18,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         bold: true,
         color: theme.fg,
       });
@@ -254,7 +260,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 4.3,
           h: 1.15,
           fontSize: 14,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           color: theme.fg,
         });
         y += 1.25;
@@ -283,7 +289,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.35,
         fontSize: 12,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       const cardW = 2.8;
@@ -312,7 +318,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.35,
           fontSize: 16,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: theme.accent,
         });
         slide.addText(step.title, {
@@ -322,7 +328,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.7,
           fontSize: 16,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: theme.fg,
         });
       });
@@ -332,7 +338,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 9,
         h: 0.7,
         fontSize: 13,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.muted,
       });
       break;
@@ -355,7 +361,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.35,
         fontSize: 11,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         color: COLORS.cream,
         align: "center",
         valign: "middle",
@@ -367,7 +373,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 1.4,
         fontSize: 34,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         color: theme.fg,
       });
       slide.addText(data.lead, {
@@ -376,7 +382,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 9,
         h: 0.8,
         fontSize: 15,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       slide.addText(data.promise, {
@@ -385,7 +391,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 4.3,
         h: 1.4,
         fontSize: 14,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       addQuote(slide, data.quote, theme, {
@@ -413,7 +419,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 9,
           h: 0.55,
           fontSize: 14,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           color: theme.muted,
         });
         startY = 2.45;
@@ -453,7 +459,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.25,
           fontSize: 12,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: theme.accent,
         });
         slide.addText(card.title, {
@@ -463,7 +469,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.3,
           fontSize: 13,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: theme.fg,
         });
         slide.addText(card.text, {
@@ -472,7 +478,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: cardW - 0.3,
           h: cardH - 0.85,
           fontSize: 11,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           color: theme.muted,
         });
       });
@@ -493,7 +499,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 4.5,
         h: 1.4,
         fontSize: 14,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.muted,
       });
       slide.addText(data.listLabel.toUpperCase(), {
@@ -503,7 +509,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.4,
         fontSize: 11,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       slide.addText(
@@ -517,7 +523,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 4.2,
           h: 2.4,
           fontSize: 14,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           bold: true,
           color: theme.fg,
         },
@@ -545,7 +551,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 4.5,
         h: 1.2,
         fontSize: 14,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       addQuote(slide, data.quote, theme, {
@@ -582,7 +588,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.25,
           fontSize: 12,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: COLORS.green,
         });
         slide.addText(event, {
@@ -592,7 +598,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.5,
           fontSize: 12,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           color: COLORS.ink,
         });
       });
@@ -621,7 +627,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 4.5,
           h: 3.4,
           fontSize: 13,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           bold: true,
           color: theme.fg,
         },
@@ -637,7 +643,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 4.5,
           h: 3.4,
           fontSize: 13,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           bold: true,
           color: theme.fg,
         },
@@ -654,7 +660,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 1.8,
         fontSize: 96,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         color: theme.fg,
       });
       slide.addText(data.title.toUpperCase(), {
@@ -664,7 +670,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.5,
         fontSize: 28,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         color: theme.fg,
       });
       slide.addText(data.lead, {
@@ -673,7 +679,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 8.5,
         h: 1.3,
         fontSize: 15,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       break;
@@ -696,7 +702,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.35,
         fontSize: 11,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.display,
         color: COLORS.ink,
         align: "center",
         valign: "middle",
@@ -705,14 +711,24 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         [
           {
             text: `${data.currency} `,
-            options: { color: COLORS.cream, fontSize: 54, bold: true },
+            options: {
+              color: COLORS.cream,
+              fontSize: 54,
+              bold: true,
+              fontFace: FONT.display,
+            },
           },
           {
             text: data.amount,
-            options: { color: COLORS.yellow, fontSize: 54, bold: true },
+            options: {
+              color: COLORS.yellow,
+              fontSize: 54,
+              bold: true,
+              fontFace: FONT.display,
+            },
           },
         ],
-        { x: 0.5, y: 1.5, w: 9, h: 1.2, fontFace: "Arial" },
+        { x: 0.5, y: 1.5, w: 9, h: 1.2 },
       );
       slide.addText(data.lead, {
         x: 0.5,
@@ -720,7 +736,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 9,
         h: 1.0,
         fontSize: 15,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.muted,
       });
       slide.addShape("rect", {
@@ -746,21 +762,34 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.3,
         fontSize: 11,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: COLORS.yellow,
       });
       slide.addText(
-        data.paymentTerms
-          .map((term) => `${term.amount} ${term.description}`)
-          .join("\n"),
+        data.paymentTerms.flatMap((term, index) => [
+          {
+            text: term.amount,
+            options: {
+              fontFace: FONT.display,
+              bold: true,
+              color: COLORS.yellow,
+              fontSize: 18,
+            },
+          },
+          {
+            text: ` ${term.description}${index < data.paymentTerms.length - 1 ? "\n" : ""}`,
+            options: {
+              fontFace: FONT.body,
+              color: COLORS.cream,
+              fontSize: 14,
+            },
+          },
+        ]),
         {
           x: 0.7,
           y: 4.55,
           w: 6,
           h: 0.7,
-          fontSize: 14,
-          fontFace: "Arial",
-          color: COLORS.cream,
         },
       );
       break;
@@ -780,7 +809,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 5.2,
         h: 1.2,
         fontSize: 14,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: theme.fg,
       });
       slide.addShape("rect", {
@@ -806,7 +835,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         h: 0.25,
         fontSize: 11,
         bold: true,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: COLORS.green,
       });
       slide.addText(
@@ -818,7 +847,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           h: 0.4,
           fontSize: 18,
           bold: true,
-          fontFace: "Arial",
+          fontFace: FONT.display,
           color: COLORS.ink,
         },
       );
@@ -828,7 +857,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
         w: 4.7,
         h: 0.4,
         fontSize: 11,
-        fontFace: "Arial",
+        fontFace: FONT.body,
         color: "666666",
       });
       slide.addText(
@@ -842,7 +871,7 @@ function buildSlide(pptx: PptxGenJS, data: ProposalSlide) {
           w: 3.5,
           h: 4.4,
           fontSize: 15,
-          fontFace: "Arial",
+          fontFace: FONT.body,
           bold: true,
           color: theme.fg,
         },
