@@ -58,9 +58,18 @@ test("ships commercial proposal route for Melive + Zetti", async () => {
     path.join(root, "app/proposta/page.tsx"),
     "utf8",
   );
-  assert.match(proposal, /Proposta comercial/);
-  assert.match(proposal, /7\.800/);
-  assert.match(proposal, /Landing Page Estratégica/);
-  assert.match(proposal, /Melive/);
-  assert.match(proposal, /Zetti/);
+  const content = await readFile(
+    path.join(root, "app/proposta/content.ts"),
+    "utf8",
+  );
+  assert.match(proposal, /proposalSlides/);
+  assert.match(content, /Proposta comercial/);
+  assert.match(content, /7\.800/);
+  assert.match(content, /Landing Page Estratégica/);
+  assert.match(content, /proposalSlides/);
+  assert.equal(
+    (content.match(/layout:/g) ?? []).length >= 14,
+    true,
+    "expected at least 14 typed slides in content.ts",
+  );
 });
