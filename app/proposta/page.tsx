@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Proposta Comercial — Melive + Zetti",
@@ -512,7 +513,7 @@ export default function PropostaPage() {
       </section>
 
       <nav className="proposta-nav" aria-label="Navegação da proposta">
-        <a href="/">Diagnóstico</a>
+        <Link href="/">Diagnóstico</Link>
         <a href="#capa">Capa</a>
         <a href="#investimento">Investimento</a>
         <a href="#proximo">Próximo passo</a>

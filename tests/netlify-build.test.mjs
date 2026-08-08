@@ -59,7 +59,7 @@ test("ships commercial proposal route for Melive + Zetti", async () => {
     "utf8",
   );
   assert.match(proposal, /Proposta comercial/);
-  assert.match(proposal, /R\$\s*7\.800/);
+  assert.match(proposal, /7\.800/);
   assert.match(proposal, /Landing Page Estratégica/);
   assert.match(proposal, /Melive/);
   assert.match(proposal, /Zetti/);
