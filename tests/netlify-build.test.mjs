@@ -62,11 +62,18 @@ test("ships commercial proposal route for Melive + Zetti", async () => {
     path.join(root, "app/proposta/content.ts"),
     "utf8",
   );
+  const builder = await readFile(
+    path.join(root, "app/proposta/build-pptx.ts"),
+    "utf8",
+  );
   assert.match(proposal, /proposalSlides/);
+  assert.match(proposal, /DownloadPptxButton/);
   assert.match(content, /Proposta comercial/);
   assert.match(content, /7\.800/);
   assert.match(content, /Landing Page Estratégica/);
   assert.match(content, /proposalSlides/);
+  assert.match(builder, /pptxgenjs/);
+  assert.match(builder, /createProposalPptx/);
   assert.equal(
     (content.match(/layout:/g) ?? []).length >= 14,
     true,

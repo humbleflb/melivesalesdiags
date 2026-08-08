@@ -2,7 +2,7 @@
 
 ## Cursor Cloud specific instructions
 
-Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Zetti** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). Commercial proposal lives at `/proposta` (`app/proposta/page.tsx`); slide copy source of truth is `app/proposta/content.ts`. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
+Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Zetti** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). Commercial proposal lives at `/proposta` (`app/proposta/page.tsx`); slide copy source of truth is `app/proposta/content.ts`; PPTX export via `app/proposta/build-pptx.ts` + download button. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
 
 ### Commands
 

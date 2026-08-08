@@ -7,6 +7,7 @@ import {
   type ProposalSlide,
   type TextPart,
 } from "./content";
+import { DownloadPptxButton } from "./DownloadPptxButton";
 
 export const metadata: Metadata = {
   title: propostaMeta.title,
@@ -119,6 +120,9 @@ function renderSlide(slide: ProposalSlide) {
             </p>
             <HeadlineParts parts={slide.headline} as="h1" />
             <p className="slide-lead">{slide.lead}</p>
+            <div className="cover-actions">
+              <DownloadPptxButton />
+            </div>
             {slide.showBrand ? <BrandMark /> : null}
           </div>
           {slide.nextHref ? (
@@ -369,7 +373,10 @@ function renderSlide(slide: ProposalSlide) {
               className="close-title"
             />
             <p className="slide-lead">{slide.lead}</p>
-            {slide.showWhatsapp ? <WhatsappCta /> : null}
+            <div className="cover-actions">
+              {slide.showWhatsapp ? <WhatsappCta /> : null}
+              <DownloadPptxButton className="button cream" />
+            </div>
             {slide.showBrand ? <BrandMark className="close-brand" /> : null}
             <p className="close-tagline">{slide.tagline}</p>
           </div>

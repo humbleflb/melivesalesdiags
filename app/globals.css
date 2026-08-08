@@ -20,6 +20,11 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
+button.button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
 
 .hero {
   min-height: 690px;
@@ -697,7 +702,33 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   text-transform: uppercase;
   max-width: 520px;
 }
-.proposta .slide-close .whatsapp-cta { margin-top: 8px; }
+.proposta .cover-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  margin: 8px 0 10px;
+}
+.proposta .pptx-download { display: inline-flex; flex-direction: column; gap: 8px; }
+.proposta .pptx-download button:disabled { opacity: .7; cursor: wait; }
+.proposta .pptx-download-error {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8a1f1f;
+}
+.proposta .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.proposta .slide-close .whatsapp-cta { margin-top: 0; }
 
 @keyframes proposta-drift {
   from { transform: rotate(-8deg) translateX(0); }

@@ -1,5 +1,5 @@
 /** Source of truth for the Melive + Zetti commercial proposal.
- *  Consumed by the /proposta web page and (later) PPTX export.
+ *  Consumed by the /proposta web page and PPTX export (`build-pptx.ts`).
  */
 
 export const propostaMeta = {
