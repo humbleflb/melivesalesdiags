@@ -172,8 +172,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-stamp melive-stamp" aria-label="Melive">
-          <img src="/melive-logo.png" alt="" />
-          <small>MELIVE</small>
+          <img src="/melive-mark.png" alt="" />
         </div>
       </section>
 

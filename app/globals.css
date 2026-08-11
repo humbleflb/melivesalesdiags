@@ -101,17 +101,15 @@ h1, h2, h3, .section-index, .opportunity-head, .button {
 .hero-stamp b { font: 78px/.9 Impact, sans-serif; }
 .hero-stamp small { font-weight: 900; letter-spacing: .08em; }
 .melive-stamp {
-  gap: 10px;
+  gap: 0;
   background: rgba(47, 47, 48, .92);
   color: var(--cream);
   border-color: var(--ink);
+  padding: 18px;
 }
 .melive-stamp img {
-  width: 88px;
+  width: 118px;
   filter: none;
-}
-.melive-stamp small {
-  letter-spacing: .14em;
 }
 .hero-actions .button.cream {
   background: var(--cream);
@@ -384,8 +382,8 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-stamp { position: absolute; right: 30px; bottom: 35px; width: 145px; height: 145px; opacity: .32; }
   .hero-stamp b { font-size: 54px; }
-  .melive-stamp { opacity: .9; }
-  .melive-stamp img { width: 64px; }
+  .melive-stamp { opacity: .9; padding: 12px; }
+  .melive-stamp img { width: 78px; }
   .summary-grid, .opportunity, .split-section, .next-section,
   .melive-specialty-grid, .melive-method-head { grid-template-columns: 1fr; }
   .melive-method-grid { grid-template-columns: 1fr 1fr; }
