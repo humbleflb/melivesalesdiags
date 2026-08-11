@@ -48,6 +48,9 @@ test("rendered page copy targets Zetti", async () => {
   const page = await readFile(path.join(root, "app/page.tsx"), "utf8");
   assert.match(page, /Zetti/);
   assert.match(page, /Vetor Farma/);
+  assert.match(page, /Sobre a Melive/);
+  assert.match(page, /Nossa especialidade|especialidade/);
+  assert.match(page, /Diagnosticar antes de construir/);
   assert.doesNotMatch(page, /Vinta Software/);
   assert.doesNotMatch(page, /Café Jaguari/);
 });

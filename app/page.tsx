@@ -1,3 +1,34 @@
+const meliveCapabilities = [
+  "Conectar cada público à oferta mais relevante",
+  "Traduzir soluções complexas em propostas de valor claras",
+  "Organizar argumentos, provas e objeções na ordem certa",
+  "Qualificar melhor o interesse antes do contato comercial",
+  "Transformar páginas e campanhas em ativos mensuráveis de aquisição",
+];
+
+const melivePerspectives = [
+  {
+    number: "01",
+    title: "Estratégia",
+    text: "Entender público, intenção, oferta, objeções e objetivo comercial.",
+  },
+  {
+    number: "02",
+    title: "Comunicação",
+    text: "Transformar diferenciais e funcionalidades em argumentos claros e relevantes.",
+  },
+  {
+    number: "03",
+    title: "Experiência",
+    text: "Construir jornadas que conduzam o visitante com clareza até o próximo passo.",
+  },
+  {
+    number: "04",
+    title: "Performance",
+    text: "Preparar cada entrega para gerar dados, aprendizados e novas oportunidades de otimização.",
+  },
+];
+
 const opportunities = [
   {
     number: "01",
@@ -118,18 +149,160 @@ function MiniAudit({ type }: { type: string }) {
 export default function Home() {
   return (
     <main>
-      <section className="hero" id="inicio">
+      <section className="hero melive-hero" id="inicio">
+        <div className="hero-lines" aria-hidden="true" />
+        <div className="hero-copy">
+          <p className="eyebrow"><span>Sobre a Melive</span> Apresentação</p>
+          <h1>
+            Estratégia, experiência
+            <br />
+            <strong>e conversão na mesma direção.</strong>
+          </h1>
+          <p className="hero-lead">
+            A Melive é uma agência estratégica que desenvolve experiências
+            digitais orientadas a objetivos reais de negócio.
+          </p>
+          <div className="hero-actions">
+            <a className="button dark" href="#especialidade">
+              Como atuamos <span>↓</span>
+            </a>
+            <a className="button cream" href="#diagnostico-zetti">
+              Ir ao diagnóstico Zetti <span>→</span>
+            </a>
+          </div>
+        </div>
+        <div className="hero-stamp melive-stamp" aria-label="Melive">
+          <img src="/melive-logo.png" alt="" />
+          <small>MELIVE</small>
+        </div>
+      </section>
+
+      <section className="summary section" id="sobre-melive">
+        <div className="section-index">01 / SOBRE A MELIVE</div>
+        <div className="summary-grid">
+          <h2>
+            Mais do que páginas
+            <br />
+            eficientes.
+            <br />
+            <em>Jornadas que decidem.</em>
+          </h2>
+          <div className="summary-copy">
+            <p>
+              Atuamos na conexão entre posicionamento, comunicação, design,
+              tecnologia e aquisição para transformar interesse em ações
+              mensuráveis.
+            </p>
+            <p>
+              Mais do que construir páginas visualmente eficientes, estruturamos
+              jornadas capazes de explicar melhor uma oferta, sustentar uma
+              decisão e criar caminhos mais claros até a conversão.
+            </p>
+            <blockquote>
+              Não começamos pela página. Começamos pela decisão que ela precisa
+              provocar.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section className="melive-specialty section" id="especialidade">
+        <div className="section-index light">02 / NOSSA ESPECIALIDADE</div>
+        <div className="melive-specialty-grid">
+          <div>
+            <h2>
+              Transformamos complexidade comercial
+              <em> em jornadas digitais mais claras.</em>
+            </h2>
+            <p className="melive-specialty-lead">
+              Empresas com diferentes produtos, públicos e frentes de atuação não
+              precisam apenas de mais tráfego. Precisam criar experiências
+              capazes de:
+            </p>
+          </div>
+          <ul className="melive-capability-list">
+            {meliveCapabilities.map((item, index) => (
+              <li key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <b>{item}</b>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="melive-specialty-foot">
+          É nesse espaço, entre a estratégia da marca e a geração de
+          oportunidades, que a Melive atua.
+        </p>
+      </section>
+
+      <section className="melive-method section" id="metodo">
+        <div className="section-index">03 / NOSSA FORMA DE PENSAR</div>
+        <div className="melive-method-head">
+          <h2>
+            Diagnosticar antes de construir.
+            <em> Mensurar depois de publicar.</em>
+          </h2>
+          <p>
+            Nosso trabalho combina quatro perspectivas. Essa integração permite
+            que a Melive participe de toda a jornada: da hipótese inicial à
+            experiência publicada e mensurável.
+          </p>
+        </div>
+        <div className="melive-method-grid">
+          {melivePerspectives.map((item) => (
+            <article key={item.number}>
+              <span>{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <blockquote className="melive-method-quote">
+          Criamos experiências bonitas, mas principalmente experiências que
+          sabem o que precisam fazer.
+        </blockquote>
+      </section>
+
+      <section className="melive-bridge" id="diagnostico-zetti">
+        <div className="melive-bridge-inner">
+          <p className="section-index light">A SEGUIR</p>
+          <h2>
+            Diagnóstico Zetti.
+            <em> Mapa de conversão.</em>
+          </h2>
+          <p>
+            A partir daqui, a leitura externa do site da Zetti — hipóteses,
+            oportunidades e um piloto recomendado para gerar demonstrações mais
+            qualificadas.
+          </p>
+          <a className="button cream" href="#diagnostico">
+            Ver o diagnóstico <span>↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section className="hero diagnosis-hero" id="mapa">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow"><span>Mapa de conversão</span> Zetti</p>
-          <h1>Ecossistema forte.<br /><strong>Jornadas mais claras.</strong></h1>
+          <h1>
+            Ecossistema forte.
+            <br />
+            <strong>Jornadas mais claras.</strong>
+          </h1>
           <p className="hero-lead">
             Como transformar a força institucional do ecossistema em jornadas
             mais claras para geração de demonstrações qualificadas.
           </p>
           <div className="hero-actions">
-            <a className="button dark" href="#diagnostico">Ver oportunidades <span>↓</span></a>
-            <p><b>3</b> oportunidades priorizadas<br />por impacto e esforço</p>
+            <a className="button dark" href="#diagnostico">
+              Ver oportunidades <span>↓</span>
+            </a>
+            <p>
+              <b>3</b> oportunidades priorizadas
+              <br />
+              por impacto e esforço
+            </p>
           </div>
         </div>
         <div className="hero-stamp" aria-label="Análise independente">
@@ -142,13 +315,19 @@ export default function Home() {
       <section className="summary section" id="diagnostico">
         <div className="section-index">00 / VISÃO GERAL</div>
         <div className="summary-grid">
-          <h2>A marca já comunica<br />o ecossistema.<br /><em>Falta a passagem.</em></h2>
+          <h2>
+            A marca já comunica
+            <br />
+            o ecossistema.
+            <br />
+            <em>Falta a passagem.</em>
+          </h2>
           <div className="summary-copy">
             <p>
               A Zetti construiu um posicionamento consistente como ecossistema de
-              inteligência operacional para o varejo farmacêutico — conectando ERP,
-              automação, IA, dados e soluções financeiras. O site cumpre bem a função
-              de apresentar essa dimensão.
+              inteligência operacional para o varejo farmacêutico — conectando
+              ERP, automação, IA, dados e soluções financeiras. O site cumpre bem
+              a função de apresentar essa dimensão.
             </p>
             <blockquote>
               O principal espaço de evolução está entre “entendi o que é a Zetti”
@@ -164,21 +343,40 @@ export default function Home() {
           </div>
         </div>
         <div className="signal-row">
-          <div><span>01</span><b>Jornadas genéricas</b><small>para soluções distintas</small></div>
-          <div><span>02</span><b>Conteúdo pouco conectado</b><small>à oferta certa</small></div>
-          <div><span>03</span><b>Demo com pouco valor</b><small>percebido antes do envio</small></div>
+          <div>
+            <span>01</span>
+            <b>Jornadas genéricas</b>
+            <small>para soluções distintas</small>
+          </div>
+          <div>
+            <span>02</span>
+            <b>Conteúdo pouco conectado</b>
+            <small>à oferta certa</small>
+          </div>
+          <div>
+            <span>03</span>
+            <b>Demo com pouco valor</b>
+            <small>percebido antes do envio</small>
+          </div>
         </div>
       </section>
 
       <section className="opportunity-section">
         <div className="section intro-section">
           <div className="section-index light">01 a 03 / OPORTUNIDADES</div>
-          <h2>Três ajustes para<br />qualificar a conversão.</h2>
+          <h2>
+            Três ajustes para
+            <br />
+            qualificar a conversão.
+          </h2>
           <p>Achados observáveis, hipóteses responsáveis e testes possíveis.</p>
         </div>
 
         {opportunities.map((item, index) => (
-          <article className={`opportunity ${index % 2 ? "reverse" : ""}`} key={item.number}>
+          <article
+            className={`opportunity ${index % 2 ? "reverse" : ""}`}
+            key={item.number}
+          >
             <div className="opportunity-visual">
               <MiniAudit type={item.visual} />
             </div>
@@ -201,7 +399,9 @@ export default function Home() {
                 <p>{item.recommendation}</p>
               </div>
               <div className="metric-list">
-                {item.metrics.map((metric) => <span key={metric}>{metric}</span>)}
+                {item.metrics.map((metric) => (
+                  <span key={metric}>{metric}</span>
+                ))}
               </div>
             </div>
           </article>

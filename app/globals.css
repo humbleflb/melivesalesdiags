@@ -100,6 +100,153 @@ h1, h2, h3, .section-index, .opportunity-head, .button {
 .hero-stamp span { position: absolute; top: 15px; font-size: 10px; letter-spacing: .16em; font-weight: 800; }
 .hero-stamp b { font: 78px/.9 Impact, sans-serif; }
 .hero-stamp small { font-weight: 900; letter-spacing: .08em; }
+.melive-stamp {
+  gap: 10px;
+  background: rgba(47, 47, 48, .92);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.melive-stamp img {
+  width: 88px;
+  filter: none;
+}
+.melive-stamp small {
+  letter-spacing: .14em;
+}
+.hero-actions .button.cream {
+  background: var(--cream);
+  color: var(--ink);
+}
+
+.melive-specialty {
+  background: var(--ink);
+  color: var(--cream);
+}
+.melive-specialty h2 em { color: var(--yellow); font-style: normal; }
+.melive-specialty-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: start;
+}
+.melive-specialty h2 {
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: .96;
+  margin: 0 0 28px;
+}
+.melive-specialty-lead {
+  max-width: 540px;
+  font-size: 18px;
+  color: rgba(236, 228, 212, .78);
+  margin: 0;
+}
+.melive-capability-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(236, 228, 212, .28);
+}
+.melive-capability-list li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(236, 228, 212, .28);
+}
+.melive-capability-list span {
+  color: var(--yellow);
+  font: 22px Impact, "Arial Narrow", Arial, sans-serif;
+}
+.melive-capability-list b {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.melive-specialty-foot {
+  margin: 56px 0 0;
+  max-width: 720px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgba(236, 228, 212, .88);
+  border-left: 6px solid var(--yellow);
+  padding: 18px 0 18px 24px;
+  background: rgba(236, 228, 212, .06);
+}
+
+.melive-method {
+  background: var(--cream);
+}
+.melive-method-head {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: clamp(30px, 5vw, 80px);
+  align-items: end;
+  margin-bottom: 48px;
+}
+.melive-method-head h2 {
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: .96;
+  margin: 0;
+}
+.melive-method-head h2 em { color: var(--green); font-style: normal; }
+.melive-method-head p {
+  margin: 0;
+  font-size: 17px;
+  max-width: 420px;
+}
+.melive-method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+.melive-method-grid article {
+  background: var(--paper);
+  padding: 28px 24px;
+  border-top: 6px solid var(--green);
+  min-height: 220px;
+  transition: transform .25s ease;
+}
+.melive-method-grid article:nth-child(2) { border-top-color: var(--yellow); }
+.melive-method-grid article:nth-child(3) { border-top-color: var(--ink); }
+.melive-method-grid article:nth-child(4) { border-top-color: var(--green); }
+.melive-method-grid article:hover { transform: translateY(-4px); }
+.melive-method-grid span {
+  color: var(--green);
+  font: 28px Impact, "Arial Narrow", Arial, sans-serif;
+}
+.melive-method-grid h3 {
+  margin: 16px 0 12px;
+  font-size: 28px;
+  line-height: 1;
+}
+.melive-method-grid p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+  line-height: 1.45;
+}
+.melive-method-quote {
+  margin: 48px 0 0;
+}
+
+.melive-bridge {
+  background: var(--green);
+  color: var(--cream);
+  padding: clamp(72px, 10vw, 120px) clamp(24px, 8vw, 120px);
+}
+.melive-bridge-inner { max-width: 860px; }
+.melive-bridge h2 {
+  font-size: clamp(44px, 6vw, 80px);
+  line-height: .96;
+  margin: 0 0 22px;
+}
+.melive-bridge h2 em { color: var(--yellow); font-style: normal; }
+.melive-bridge p {
+  max-width: 640px;
+  font-size: 18px;
+  color: rgba(236, 228, 212, .84);
+  margin: 0 0 32px;
+}
 
 .section { padding: clamp(76px, 10vw, 144px) clamp(24px, 8vw, 120px); }
 .section-index { font-size: 13px; letter-spacing: .12em; margin-bottom: 50px; display: flex; align-items: center; gap: 15px; }
@@ -237,7 +384,11 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-stamp { position: absolute; right: 30px; bottom: 35px; width: 145px; height: 145px; opacity: .32; }
   .hero-stamp b { font-size: 54px; }
-  .summary-grid, .opportunity, .split-section, .next-section { grid-template-columns: 1fr; }
+  .melive-stamp { opacity: .9; }
+  .melive-stamp img { width: 64px; }
+  .summary-grid, .opportunity, .split-section, .next-section,
+  .melive-specialty-grid, .melive-method-head { grid-template-columns: 1fr; }
+  .melive-method-grid { grid-template-columns: 1fr 1fr; }
   .opportunity.reverse .opportunity-visual { order: 0; }
   .opportunity-visual { min-height: 520px; }
   .split-section { gap: 32px; }
@@ -273,6 +424,9 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .table-row strong { grid-column: 2; grid-row: 2; }
   .next-section { min-height: auto; }
   .next-copy h2 { font-size: 70px; }
+  .melive-method-grid { grid-template-columns: 1fr; }
+  .melive-method-grid article { min-height: 0; }
+  .melive-bridge h2 { font-size: clamp(40px, 12vw, 58px); }
   footer { flex-direction: column; align-items: flex-start; }
 }
 
