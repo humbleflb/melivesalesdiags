@@ -1,6 +1,6 @@
-# Diagnóstico Vinta Software — Melive
+# Diagnóstico Zetti — Melive
 
-Projeto-fonte da página de diagnóstico criada para a Vinta Software.
+Projeto-fonte da página de diagnóstico criada para a Zetti.
 
 ## Abrir no Cursor
 

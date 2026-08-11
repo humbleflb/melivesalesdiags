@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Vinta Software — Melive",
+  title: "Diagnóstico Zetti — Melive",
   description:
-    "Diagnóstico preliminar da jornada digital B2B da Vinta Software.",
+    "Mapa de conversão da Zetti: jornadas mais claras para demonstrações qualificadas.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

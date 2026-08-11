@@ -1,19 +1,50 @@
+const meliveCapabilities = [
+  "Conectar cada público à oferta mais relevante",
+  "Traduzir soluções complexas em propostas de valor claras",
+  "Organizar argumentos, provas e objeções na ordem certa",
+  "Qualificar melhor o interesse antes do contato comercial",
+  "Transformar páginas e campanhas em ativos mensuráveis de aquisição",
+];
+
+const melivePerspectives = [
+  {
+    number: "01",
+    title: "Estratégia",
+    text: "Entender público, intenção, oferta, objeções e objetivo comercial.",
+  },
+  {
+    number: "02",
+    title: "Comunicação",
+    text: "Transformar diferenciais e funcionalidades em argumentos claros e relevantes.",
+  },
+  {
+    number: "03",
+    title: "Experiência",
+    text: "Construir jornadas que conduzam o visitante com clareza até o próximo passo.",
+  },
+  {
+    number: "04",
+    title: "Performance",
+    text: "Preparar cada entrega para gerar dados, aprendizados e novas oportunidades de otimização.",
+  },
+];
+
 const opportunities = [
   {
     number: "01",
-    label: "Entrada",
-    title: "Orientar a entrada pelo desafio do comprador",
+    label: "Jornada",
+    title: "Transformar cada solução em uma jornada comercial própria",
     observation:
-      "A home apresenta dois grandes caminhos: Healthcare Development e End-to-end Development. Depois, o comprador encontra EHR, Medplum, interoperabilidade, Product Discovery, AI, modernização de legado, equipes dedicadas e várias stacks. A amplitude mostra capacidade. Também aumenta o esforço para quem conhece o problema, mas ainda não sabe o que contratar.",
+      "As páginas apresentam ofertas bastante diferentes: ERP para farmácias e redes, inteligência artificial aplicada à operação, automação robótica de estoque, inteligência financeira integrada e soluções para diferentes portes. Entretanto, os próximos passos ainda convergem para mecanismos de contato relativamente amplos — “Solicitar demonstração”, “Falar com consultor” ou “Quero falar com um especialista”.",
     hypothesis:
-      "Se a entrada for organizada por cenário de negócio, e não só por serviço ou tecnologia, o visitante se reconhece mais rápido e avança com menos fricção.",
+      "Um visitante interessado em automação Gollmann não chega com as mesmas dúvidas de alguém procurando um ERP ou tentando organizar a conciliação financeira. Quando essas intenções terminam em uma experiência semelhante, parte do contexto construído pela página pode não acompanhar o usuário até a conversão.",
     recommendation:
-      "Criar uma jornada guiada em três perguntas: o que a empresa está construindo, em qual estágio o projeto está e qual é o principal bloqueio. No fim, entregar o caminho recomendado, o serviço mais aderente, um case semelhante e um próximo passo claro.",
+      "Criar landing pages de conversão específicas para as principais ofertas, começando pelas soluções de maior prioridade comercial. Cada jornada deve responder: para quem é, qual problema indica a necessidade, o que muda na operação, como funciona, quais provas sustentam, o que será visto na demonstração e qual é o próximo passo após o formulário.",
     metrics: [
-      "Clareza da oferta",
-      "Acessos às páginas certas",
-      "Abandono por excesso",
-      "Leads contextualizados",
+      "Aderência campanha → página",
+      "Qualificação antes do contato",
+      "Atribuição por produto",
+      "Testes sem alterar o site",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -21,19 +52,19 @@ const opportunities = [
   },
   {
     number: "02",
-    label: "Aquisição",
-    title: "Criar uma oferta intermediária de aquisição",
+    label: "Conteúdo",
+    title: "Conectar melhor conteúdo, problema e solução",
     observation:
-      "A página de contato funciona bem para quem já está pronto: agendamento direto ou formulário com telefone, origem, investimento e descrição do projeto. Isso qualifica alta intenção. Ainda assim, falta um degrau para quem já viu o problema técnico e ainda não quer informar orçamento ou marcar reunião. A Vinta já comunica ativos valiosos para essa etapa, como os Building Blocks FHIR-native.",
+      "A Zetti produz conteúdos sobre estoque, ruptura, margem, automação, experiência do consumidor, eficiência financeira e crescimento de redes. Esses conteúdos atraem visitantes a partir de problemas específicos. Entretanto, o avanço para uma conversa comercial tende a direcionar o visitante para uma apresentação mais ampla do ecossistema.",
     hypothesis:
-      "Se parte desse conhecimento virar um diagnóstico inicial, a entrada fica menos exigente e a oportunidade chega mais qualificada para o comercial.",
+      "Existe uma oportunidade de aproveitar melhor a intenção já revelada pelo conteúdo consumido. Quem chega por um artigo sobre estoque parado pode avançar para previsão de demanda; quem lê sobre conciliação pode receber o B.it; quem pesquisa automação pode ir direto para a experiência Gollmann.",
     recommendation:
-      "Lançar o Healthcare Product Readiness Review com a promessa: descubra os principais riscos técnicos e operacionais antes de levar o produto para produção. Avaliar estágio, arquitetura, interoperabilidade, fluxos clínicos, segurança, capacidade interna e risco de escala. Entregar maturidade, riscos, próximo passo e um case relacionado.",
+      "Construir pontes contextuais: conteúdo sobre o problema → página da solução relacionada → prova específica → demonstração contextualizada. Exemplos: ruptura e excesso → Geniuz, Vetor Trilho ou Vyzio; conciliação → B.it; velocidade no balcão → Gollmann; expansão de redes → Vetor Farma; pequenas farmácias → Klozis.",
     metrics: [
-      "Demanda pré-reunião",
-      "Leads contextualizados",
-      "Segmentação por maturidade",
-      "Follow-ups relevantes",
+      "Aproveitamento do orgânico",
+      "Continuidade educação → decisão",
+      "Leads com interesse claro",
+      "Conteúdo gerando demanda",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -41,19 +72,19 @@ const opportunities = [
   },
   {
     number: "03",
-    label: "Prova",
-    title: "Transformar os cases em uma jornada de decisão",
+    label: "Demonstração",
+    title: "Dar mais valor percebido ao ato de solicitar uma demonstração",
     observation:
-      "A biblioteca de cases é especialmente forte: EHR, Medplum, hospital operations, behavioral health, chronic disease, AI e product discovery. Alguns já mostram resultado concreto, como protótipo validado e escopo de MVP definido em duas semanas. O ativo existe. O visitante, porém, ainda precisa decidir sozinho qual case prova o próprio contexto.",
+      "“Solicitar demonstração” comunica a ação, mas ainda não explica com precisão o que o visitante receberá. A página de contato também atende diferentes necessidades por meio de uma abertura ampla: “Como podemos ajudar?”. Faltam respostas sobre o que será mostrado, se a demo é adaptada, quanto tempo dura e o que acontece depois do envio.",
     hypothesis:
-      "Se os cases forem organizados por problema, estágio e perfil do decisor, a prova técnica chega mais perto da decisão comercial.",
+      "Para soluções que envolvem mudança de ERP, dados financeiros, automação física ou integração operacional, o visitante pode precisar de mais segurança antes de disponibilizar seus dados. A fricção pode não estar somente no formulário — pode estar na ausência de expectativa clara sobre o encontro.",
     recommendation:
-      "Criar trilhas para CTO, Product Leader, Healthcare Operations e Founder. Em cada trilha, reunir um problema reconhecível, um case relacionado, um resultado mensurável, a abordagem usada e um CTA coerente com o estágio. Traduzir resultados em chamadas objetivas, como “MVP validado em duas semanas” ou “Do protótipo ao roadmap de produção”.",
+      "Reposicionar a demonstração como entrega consultiva: “Veja como a Zetti pode conectar estoque, vendas, compras, fiscal e financeiro de acordo com a realidade da sua operação.” Formulário em duas etapas — contato (nome, e-mail, telefone) e contexto da operação (perfil, lojas, solução, desafio, sistema atual) com campos condicionais por solução.",
     metrics: [
-      "Consumo dos cases",
-      "Autoridade percebida",
-      "Diferenciação além da stack",
-      "Conversão conteúdo → contato",
+      "Expectativa antes do envio",
+      "Contexto para o comercial",
+      "Demos mais personalizadas",
+      "Qualidade da demanda",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -64,53 +95,53 @@ const opportunities = [
 function MiniAudit({ type }: { type: string }) {
   if (type === "paths") {
     return (
-      <div className="mini-window" aria-label="Representação da home com muitos caminhos">
+      <div className="mini-window" aria-label="Representação de CTAs genéricos para soluções distintas">
         <div className="window-top"><span /><span /><span /></div>
         <div className="store-hint">
           <div className="ghost-line wide" />
           <div className="ghost-products"><i /><i /><i /></div>
         </div>
         <div className="mock-popup">
-          <b>QUAL SERVIÇO CONTRATAR?</b>
-          <p>Healthcare, EHR, Medplum, AI, Discovery, legado…</p>
-          <button>VER TODAS AS OPÇÕES</button>
+          <b>QUAL SOLUÇÃO?</b>
+          <p>ERP, AI Suite, Gollmann, TechFin…</p>
+          <button>SOLICITAR DEMONSTRAÇÃO</button>
         </div>
-        <em className="audit-tag">excesso de caminhos</em>
+        <em className="audit-tag">CTA genérico</em>
       </div>
     );
   }
 
   if (type === "review") {
     return (
-      <div className="quiz-card" aria-label="Conceito de diagnóstico de maturidade">
-        <small>HEALTHCARE PRODUCT READINESS</small>
-        <h4>Em qual estágio está o produto?</h4>
+      <div className="quiz-card" aria-label="Ponte entre conteúdo e solução">
+        <small>CONTEÚDO → SOLUÇÃO</small>
+        <h4>De onde veio o interesse?</h4>
         <div className="quiz-options">
-          <span>Protótipo</span>
-          <span className="selected">Em modernização</span>
-          <span>Pronto para escala</span>
+          <span>Ruptura de estoque</span>
+          <span className="selected">Conciliação financeira</span>
+          <span>Automação no balcão</span>
         </div>
         <div className="quiz-progress"><i /></div>
-        <button>CONTINUAR →</button>
-        <em className="audit-tag">entrada intermediária</em>
+        <button>IR PARA O B.IT →</button>
+        <em className="audit-tag">ponte contextual</em>
       </div>
     );
   }
 
   return (
-    <div className="product-card" aria-label="Conceito de case como prova de decisão">
-      <div className="coffee-pack"><span>V</span><small>CASE</small></div>
+    <div className="product-card" aria-label="Conceito de demonstração com valor percebido">
+      <div className="coffee-pack"><span>Z</span><small>DEMO</small></div>
       <div className="product-info">
-        <small>HEALTHCARE · EHR</small>
-        <h4>MVP em 2 semanas</h4>
-        <div className="taste"><span>Discovery</span><span>Medplum</span></div>
+        <small>VETOR FARMA</small>
+        <h4>Demo personalizada</h4>
+        <div className="taste"><span>45 min</span><span>Consultiva</span></div>
         <dl>
-          <div><dt>Perfil</dt><dd>Product Leader</dd></div>
-          <div><dt>Resultado</dt><dd>Escopo validado</dd></div>
+          <div><dt>Perfil</dt><dd>Rede farmacêutica</dd></div>
+          <div><dt>Foco</dt><dd>Estoque + fiscal</dd></div>
         </dl>
-        <button>VER CASE</button>
+        <button>AGENDAR</button>
       </div>
-      <em className="audit-tag">prova no contexto</em>
+      <em className="audit-tag">valor da demo</em>
     </div>
   );
 }
@@ -118,18 +149,159 @@ function MiniAudit({ type }: { type: string }) {
 export default function Home() {
   return (
     <main>
-      <section className="hero" id="inicio">
+      <section className="hero melive-hero" id="inicio">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span>Diagnóstico da jornada B2B</span> Vinta Software</p>
-          <h1>Menos esforço para se reconhecer.<br /><strong>Mais clareza para decidir.</strong></h1>
+          <p className="eyebrow"><span>Sobre a Melive</span> Apresentação</p>
+          <h1>
+            Estratégia, experiência
+            <br />
+            <strong>e conversão na mesma direção.</strong>
+          </h1>
           <p className="hero-lead">
-            Uma leitura da experiência pública do site, dos serviços e dos cases
-            para ajudar o comprador a sair do desafio técnico e chegar ao próximo passo certo.
+            A Melive é uma agência estratégica que desenvolve experiências
+            digitais orientadas a objetivos reais de negócio.
           </p>
           <div className="hero-actions">
-            <a className="button dark" href="#diagnostico">Ver oportunidades <span>↓</span></a>
-            <p><b>3</b> oportunidades priorizadas<br />por impacto e esforço</p>
+            <a className="button dark" href="#especialidade">
+              Como atuamos <span>↓</span>
+            </a>
+            <a className="button cream" href="#diagnostico-zetti">
+              Ir ao diagnóstico Zetti <span>→</span>
+            </a>
+          </div>
+        </div>
+        <div className="hero-stamp melive-stamp" aria-label="Melive">
+          <img src="/melive-mark.png" alt="" />
+        </div>
+      </section>
+
+      <section className="summary section" id="sobre-melive">
+        <div className="section-index">01 / SOBRE A MELIVE</div>
+        <div className="summary-grid">
+          <h2>
+            Mais do que páginas
+            <br />
+            eficientes.
+            <br />
+            <em>Jornadas que decidem.</em>
+          </h2>
+          <div className="summary-copy">
+            <p>
+              Atuamos na conexão entre posicionamento, comunicação, design,
+              tecnologia e aquisição para transformar interesse em ações
+              mensuráveis.
+            </p>
+            <p>
+              Mais do que construir páginas visualmente eficientes, estruturamos
+              jornadas capazes de explicar melhor uma oferta, sustentar uma
+              decisão e criar caminhos mais claros até a conversão.
+            </p>
+            <blockquote>
+              Não começamos pela página. Começamos pela decisão que ela precisa
+              provocar.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section className="melive-specialty section" id="especialidade">
+        <div className="section-index light">02 / NOSSA ESPECIALIDADE</div>
+        <div className="melive-specialty-grid">
+          <div>
+            <h2>
+              Transformamos complexidade comercial
+              <em> em jornadas digitais mais claras.</em>
+            </h2>
+            <p className="melive-specialty-lead">
+              Empresas com diferentes produtos, públicos e frentes de atuação não
+              precisam apenas de mais tráfego. Precisam criar experiências
+              capazes de:
+            </p>
+          </div>
+          <ul className="melive-capability-list">
+            {meliveCapabilities.map((item, index) => (
+              <li key={item}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <b>{item}</b>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="melive-specialty-foot">
+          É nesse espaço, entre a estratégia da marca e a geração de
+          oportunidades, que a Melive atua.
+        </p>
+      </section>
+
+      <section className="melive-method section" id="metodo">
+        <div className="section-index">03 / NOSSA FORMA DE PENSAR</div>
+        <div className="melive-method-head">
+          <h2>
+            Diagnosticar antes de construir.
+            <em> Mensurar depois de publicar.</em>
+          </h2>
+          <p>
+            Nosso trabalho combina quatro perspectivas. Essa integração permite
+            que a Melive participe de toda a jornada: da hipótese inicial à
+            experiência publicada e mensurável.
+          </p>
+        </div>
+        <div className="melive-method-grid">
+          {melivePerspectives.map((item) => (
+            <article key={item.number}>
+              <span>{item.number}</span>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+        <blockquote className="melive-method-quote">
+          Criamos experiências bonitas, mas principalmente experiências que
+          sabem o que precisam fazer.
+        </blockquote>
+      </section>
+
+      <section className="melive-bridge" id="diagnostico-zetti">
+        <div className="melive-bridge-inner">
+          <p className="section-index light">A SEGUIR</p>
+          <h2>
+            Diagnóstico Zetti.
+            <em> Mapa de conversão.</em>
+          </h2>
+          <p>
+            A partir daqui, a leitura externa do site da Zetti — hipóteses,
+            oportunidades e um piloto recomendado para gerar demonstrações mais
+            qualificadas.
+          </p>
+          <a className="button cream" href="#diagnostico">
+            Ver o diagnóstico <span>↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section className="hero diagnosis-hero" id="mapa">
+        <div className="hero-lines" aria-hidden="true" />
+        <div className="hero-copy">
+          <p className="eyebrow"><span>Mapa de conversão</span> Zetti</p>
+          <h1>
+            Ecossistema forte.
+            <br />
+            <strong>Jornadas mais claras.</strong>
+          </h1>
+          <p className="hero-lead">
+            Como transformar a força institucional do ecossistema em jornadas
+            mais claras para geração de demonstrações qualificadas.
+          </p>
+          <div className="hero-actions">
+            <a className="button dark" href="#diagnostico">
+              Ver oportunidades <span>↓</span>
+            </a>
+            <p>
+              <b>3</b> oportunidades priorizadas
+              <br />
+              por impacto e esforço
+            </p>
           </div>
         </div>
         <div className="hero-stamp" aria-label="Análise independente">
@@ -142,39 +314,68 @@ export default function Home() {
       <section className="summary section" id="diagnostico">
         <div className="section-index">00 / VISÃO GERAL</div>
         <div className="summary-grid">
-          <h2>A base já é sólida.<br />A oportunidade está<br /><em>na jornada.</em></h2>
+          <h2>
+            A marca já comunica
+            <br />
+            o ecossistema.
+            <br />
+            <em>Falta a passagem.</em>
+          </h2>
           <div className="summary-copy">
             <p>
-              A Vinta já tem profundidade técnica, especialização crescente em healthcare,
-              cases com United Nations, Unilever, Quilted Health e Rewind, nota 4,9 no Clutch
-              e conteúdo frequente sobre EHR, FHIR e Medplum.
+              A Zetti construiu um posicionamento consistente como ecossistema de
+              inteligência operacional para o varejo farmacêutico — conectando
+              ERP, automação, IA, dados e soluções financeiras. O site cumpre bem
+              a função de apresentar essa dimensão.
             </p>
             <blockquote>
-              O comprador ainda precisa descobrir sozinho qual capacidade da Vinta
-              responde ao seu desafio e qual deve ser o próximo passo.
+              O principal espaço de evolução está entre “entendi o que é a Zetti”
+              e “entendi qual solução é mais adequada e por que solicitar uma
+              demonstração agora.”
             </blockquote>
             <p className="method-note">
-              Esta é uma leitura heurística da experiência externa, sem acesso a tráfego,
-              CRM ou conversões internas. As hipóteses precisam ser confrontadas com dados reais.
+              Esta análise foi construída exclusivamente a partir da experiência
+              externa do site, sem acesso a dados de tráfego, conversão, CRM ou
+              desempenho comercial. Os pontos devem ser tratados como hipóteses
+              para validação, não como problemas comprovados.
             </p>
           </div>
         </div>
         <div className="signal-row">
-          <div><span>01</span><b>Entrada pouco guiada</b><small>por desafio de negócio</small></div>
-          <div><span>02</span><b>Lacuna na aquisição</b><small>entre interesse e reunião</small></div>
-          <div><span>03</span><b>Cases pouco contextualizados</b><small>para a decisão</small></div>
+          <div>
+            <span>01</span>
+            <b>Jornadas genéricas</b>
+            <small>para soluções distintas</small>
+          </div>
+          <div>
+            <span>02</span>
+            <b>Conteúdo pouco conectado</b>
+            <small>à oferta certa</small>
+          </div>
+          <div>
+            <span>03</span>
+            <b>Demo com pouco valor</b>
+            <small>percebido antes do envio</small>
+          </div>
         </div>
       </section>
 
       <section className="opportunity-section">
         <div className="section intro-section">
           <div className="section-index light">01 a 03 / OPORTUNIDADES</div>
-          <h2>Três ajustes com potencial<br />de destravar a conversão.</h2>
+          <h2>
+            Três ajustes para
+            <br />
+            qualificar a conversão.
+          </h2>
           <p>Achados observáveis, hipóteses responsáveis e testes possíveis.</p>
         </div>
 
         {opportunities.map((item, index) => (
-          <article className={`opportunity ${index % 2 ? "reverse" : ""}`} key={item.number}>
+          <article
+            className={`opportunity ${index % 2 ? "reverse" : ""}`}
+            key={item.number}
+          >
             <div className="opportunity-visual">
               <MiniAudit type={item.visual} />
             </div>
@@ -197,7 +398,9 @@ export default function Home() {
                 <p>{item.recommendation}</p>
               </div>
               <div className="metric-list">
-                {item.metrics.map((metric) => <span key={metric}>{metric}</span>)}
+                {item.metrics.map((metric) => (
+                  <span key={metric}>{metric}</span>
+                ))}
               </div>
             </div>
           </article>
@@ -207,25 +410,26 @@ export default function Home() {
       <section className="split-section section">
         <div className="split-badge">+</div>
         <div>
-          <div className="section-index">OPORTUNIDADE ESTRATÉGICA</div>
-          <h2>Uma jornada única.<br /><em>Quatro momentos.</em></h2>
+          <div className="section-index">PILOTO RECOMENDADO</div>
+          <h2>Uma jornada prioritária.<br /><em>Vetor Farma.</em></h2>
         </div>
         <div className="split-copy">
           <p>
-            O movimento mais forte une as três frentes em sequência. O visitante
-            identifica o desafio, recebe uma avaliação inicial, vê uma prova semelhante
-            e chega ao comercial com contexto.
+            Em vez de redesenhar toda a experiência de uma vez, recomendamos
+            validar uma jornada: landing page de demonstração do Vetor Farma —
+            produto central, público identificável, volume de provas e conexão
+            natural com conteúdos e campanhas.
           </p>
           <div className="journeys">
             <article>
-              <small>RECONHECER E ORIENTAR</small>
-              <h3>Do cenário à jornada guiada</h3>
-              <p>Entrada por desafio de negócio, não só por stack ou serviço.</p>
+              <small>HEADLINE SUGERIDA</small>
+              <h3>Dados em controle para crescer</h3>
+              <p>Sua farmácia já gera os dados. O Vetor Farma transforma esses dados em controle para crescer.</p>
             </article>
             <article>
-              <small>AVALIAR E CONVERTER</small>
-              <h3>Do diagnóstico ao contato</h3>
-              <p>Maturidade, prova aderente e conversa comercial com contexto.</p>
+              <small>SEGUNDA FRENTE</small>
+              <h3>Landing do Gollmann</h3>
+              <p>Para campanhas e conteúdos de automação, espaço físico, rastreabilidade e velocidade no atendimento.</p>
             </article>
           </div>
         </div>
@@ -235,27 +439,27 @@ export default function Home() {
         <div className="section-index light">MATRIZ DE DECISÃO</div>
         <div className="priority-head">
           <h2>Começar onde impacto<br />e velocidade se encontram.</h2>
-          <p>Ordem sugerida para testar sem redesenhar toda a operação.</p>
+          <p>Ordem sugerida para testar sem redesenhar o site institucional.</p>
         </div>
         <div className="priority-table" role="table" aria-label="Priorização de melhorias">
           <div className="table-row table-label" role="row">
             <span>Mudança</span><span>Impacto</span><span>Esforço</span><span>Ordem</span>
           </div>
           <div className="table-row" role="row">
-            <b>Healthcare Product Readiness Review</b>
+            <b>Landing de demonstração do Vetor Farma</b>
             <span>Alto</span><span>Médio</span><strong>01</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Jornada guiada por desafio do comprador</b>
+            <b>Demo com valor percebido e formulário em 2 etapas</b>
             <span>Alto</span><span>Médio</span><strong>02</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Cases por perfil de decisor</b>
+            <b>Pontes conteúdo → solução (orgânico)</b>
             <span>Alto</span><span>Médio</span><strong>03</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Jornada integrada até o contato</b>
-            <span>Alto</span><span>Médio/alto</span><strong>04</strong>
+            <b>Landing dedicada ao Gollmann</b>
+            <span>Alto</span><span>Médio</span><strong>04</strong>
           </div>
         </div>
       </section>
@@ -266,48 +470,54 @@ export default function Home() {
           <div className="section-index">COMO A MELIVE ENTRA</div>
           <h2>Do diagnóstico<br />à execução.</h2>
           <p>
-            A Vinta já tem reputação, conteúdo e especialização. A Melive entra para
-            transformar essas oportunidades em jornada: desenhar a entrada por desafio,
-            estruturar o Readiness Review, organizar os cases para decisão e medir
-            o que realmente move o comercial.
+            A recomendação não é substituir o site institucional. Ele deve continuar
+            apresentando a força do ecossistema Zetti. As landing pages entram como
+            camada complementar de conversão — por solução, campanha, problema,
+            perfil e conteúdo consumido. A Melive entra para desenhar e validar
+            essas jornadas com o comercial.
           </p>
           <ol>
-            <li><span>01</span> Priorizar o primeiro teste com base nos dados da operação</li>
-            <li><span>02</span> Construir a oferta intermediária e a narrativa da jornada</li>
-            <li><span>03</span> Acompanhar conversão, abandono e tempo até a reunião</li>
+            <li><span>01</span> Priorizar o piloto do Vetor Farma com base nos dados internos</li>
+            <li><span>02</span> Construir a LP, a narrativa da demo e o formulário contextualizado</li>
+            <li><span>03</span> Medir conversão, qualidade do lead e tempo até a demonstração</li>
           </ol>
-          <a
-            className="button cream whatsapp-cta"
-            href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Melive%20sobre%20como%20executar%20o%20diagn%C3%B3stico%20da%20Vinta%20Software."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span className="whatsapp-cta-label">
-              <svg
-                className="whatsapp-icon"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path
-                  fill="currentColor"
-                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                />
-              </svg>
-              Conversar com a Melive
-            </span>
-            <span aria-hidden="true">↗</span>
-          </a>
+          <div className="hero-actions next-actions">
+            <a
+              className="button cream whatsapp-cta"
+              href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Melive%20sobre%20como%20executar%20o%20diagn%C3%B3stico%20da%20Zetti."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="whatsapp-cta-label">
+                <svg
+                  className="whatsapp-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+                Conversar com a Melive
+              </span>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a className="button dark" href="/proposta">
+              Ver proposta comercial <span>→</span>
+            </a>
+          </div>
         </div>
         <div className="next-mark">
           <img src="/melive-logo.png" alt="" />
-          <p>Da hipótese à jornada<br />que o comercial consegue usar.</p>
+          <p>Uma marca integrada não precisa<br />oferecer uma jornada única.</p>
         </div>
       </section>
 
       <footer>
         <img src="/melive-logo.png" alt="Melive" />
-        <p>Diagnóstico preliminar da jornada B2B • Vinta Software • Julho de 2026</p>
+        <p>Diagnóstico preliminar da jornada de conversão • Zetti • Agosto de 2026</p>
         <a href="#inicio">Voltar ao topo ↑</a>
       </footer>
     </main>
