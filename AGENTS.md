@@ -2,7 +2,7 @@
 
 ## Cursor Cloud specific instructions
 
-Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Vinta Software** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). **Production target: Netlify** via Nitro. No Docker/DB server required locally.
+Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Trinio** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). Opens with Melive introduction slides, then the Trinio conversion map. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
 
 ### Commands
 

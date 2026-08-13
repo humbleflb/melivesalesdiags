@@ -40,13 +40,18 @@ test("produces Netlify publish directory and Nitro server function", async () =>
 
 test("ships Melive static assets in dist/", async () => {
   assert.equal(await exists("dist/melive-logo.png"), true);
+  assert.equal(await exists("dist/melive-mark.png"), true);
   assert.equal(await exists("dist/favicon.svg"), true);
 });
 
-test("rendered page copy targets Vinta Software", async () => {
-  const { readFile } = await import("node:fs/promises");
+test("rendered page copy targets Trinio", async () => {
   const page = await readFile(path.join(root, "app/page.tsx"), "utf8");
-  assert.match(page, /Vinta Software/);
-  assert.match(page, /Healthcare Product Readiness Review/);
+  assert.match(page, /Trinio/);
+  assert.match(page, /TrinioOS/);
+  assert.match(page, /Checkout/);
+  assert.match(page, /Sobre a Melive/);
+  assert.match(page, /Diagnosticar antes de construir/);
+  assert.doesNotMatch(page, /Zetti/);
+  assert.doesNotMatch(page, /Vinta Software/);
   assert.doesNotMatch(page, /Café Jaguari/);
 });

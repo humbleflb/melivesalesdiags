@@ -1,5 +1,5 @@
 {
-  "name": "diagnostico-vinta",
+  "name": "diagnostico-trinio",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -39,5 +39,5 @@
     "vite": "8.0.13"
   },
   "type": "module",
-  "displayName": "Diagnóstico Vinta Software — Melive"
+  "displayName": "Diagnóstico Trinio — Melive"
 }
