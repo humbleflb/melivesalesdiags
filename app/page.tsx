@@ -32,19 +32,19 @@ const melivePerspectives = [
 const opportunities = [
   {
     number: "01",
-    label: "Jornada",
-    title: "Transformar cada solução em uma jornada comercial própria",
+    label: "Posicionamento",
+    title: "Conectar o primeiro bloco a resultados reconhecíveis",
     observation:
-      "As páginas apresentam ofertas bastante diferentes: ERP para farmácias e redes, inteligência artificial aplicada à operação, automação robótica de estoque, inteligência financeira integrada e soluções para diferentes portes. Entretanto, os próximos passos ainda convergem para mecanismos de contato relativamente amplos — “Solicitar demonstração”, “Falar com consultor” ou “Quero falar com um especialista”.",
+      "O primeiro bloco é construído principalmente sobre “Powering the next era of profitable commerce” e “Commerce Orchestration Suite by AI Agents”. A composição posiciona a marca e apresenta sua categoria. Entretanto, os resultados mais concretos — conversão, margem e eficiência omnicanal — aparecem somente nas seções seguintes. O CTA está na navegação, mas não integra diretamente a narrativa central do primeiro bloco.",
     hypothesis:
-      "Um visitante interessado em automação Gollmann não chega com as mesmas dúvidas de alguém procurando um ERP ou tentando organizar a conciliação financeira. Quando essas intenções terminam em uma experiência semelhante, parte do contexto construído pela página pode não acompanhar o usuário até a conversão.",
+      "Para quem já conhece a Trinio ou entende commerce orchestration, a comunicação reforça posicionamento. Para visitantes de campanhas, indicações, eventos ou buscas por um problema específico, pode faltar resposta rápida: a solução é para uma operação como a minha? Qual problema resolve primeiro? O impacto está no checkout, frete, fulfillment ou loja? Preciso contratar toda a suíte?",
     recommendation:
-      "Criar landing pages de conversão específicas para as principais ofertas, começando pelas soluções de maior prioridade comercial. Cada jornada deve responder: para quem é, qual problema indica a necessidade, o que muda na operação, como funciona, quais provas sustentam, o que será visto na demonstração e qual é o próximo passo após o formulário.",
+      "Preservar a assinatura institucional e adicionar uma camada concreta de tradução comercial no primeiro bloco: categoria → resultado → público → próximo passo. Exemplo: “Mais conversão no checkout. Mais margem no fulfillment. Mais controle da operação omnicanal.” CTA principal: conhecer o TrinioOS aplicado à minha operação.",
     metrics: [
-      "Aderência campanha → página",
-      "Qualificação antes do contato",
-      "Atribuição por produto",
-      "Testes sem alterar o site",
+      "Reconhecimento da proposta",
+      "Menos dependência da categoria",
+      "Conexão campanha → página",
+      "Próximo passo mais visível",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -52,19 +52,19 @@ const opportunities = [
   },
   {
     number: "02",
-    label: "Conteúdo",
-    title: "Conectar melhor conteúdo, problema e solução",
+    label: "Entrada",
+    title: "Criar portas de entrada específicas para cada problema",
     observation:
-      "A Zetti produz conteúdos sobre estoque, ruptura, margem, automação, experiência do consumidor, eficiência financeira e crescimento de redes. Esses conteúdos atraem visitantes a partir de problemas específicos. Entretanto, o avanço para uma conversa comercial tende a direcionar o visitante para uma apresentação mais ampla do ecossistema.",
+      "O site apresenta o TrinioOS como suíte modular — Checkout, Orquestrador de Pedidos, Pick & Pack e agentes de IA. Visitantes podem chegar por dores distintas: baixa conversão, abandono de frete, margem no fulfillment, cancelamentos, ship from store ou falta de visibilidade omnicanal. Na experiência analisada, essas intenções percorrem a mesma jornada institucional.",
     hypothesis:
-      "Existe uma oportunidade de aproveitar melhor a intenção já revelada pelo conteúdo consumido. Quem chega por um artigo sobre estoque parado pode avançar para previsão de demanda; quem lê sobre conciliação pode receber o B.it; quem pesquisa automação pode ir direto para a experiência Gollmann.",
+      "A amplitude fortalece o TrinioOS como plataforma, mas pode dificultar a escolha de um ponto inicial. Uma liderança de e-commerce preocupada com conversão precisa de argumentos e provas diferentes de uma liderança de operações focada em fulfillment. Quando todos percorrem a mesma narrativa, a suíte ganha destaque e a dor que motivou a visita pode perder prioridade.",
     recommendation:
-      "Construir pontes contextuais: conteúdo sobre o problema → página da solução relacionada → prova específica → demonstração contextualizada. Exemplos: ruptura e excesso → Geniuz, Vetor Trilho ou Vyzio; conciliação → B.it; velocidade no balcão → Gollmann; expansão de redes → Vetor Farma; pequenas farmácias → Klozis.",
+      "Criar jornadas específicas: (1) Conversão e checkout — Checkout headless + Checkout Agent; (2) Margem e fulfillment — Orquestrador + Fulfillment Agent + Order Manager Agent; (3) Operação omnicanal — Pick & Pack + Dashboard OS + Store Ops Agent. Cada uma com problema, solução, provas e CTA próprios.",
     metrics: [
-      "Aproveitamento do orgânico",
-      "Continuidade educação → decisão",
+      "Correspondência tráfego → mensagem",
       "Leads com interesse claro",
-      "Conteúdo gerando demanda",
+      "Campanhas mais específicas",
+      "Demanda por problema/solução",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -72,19 +72,19 @@ const opportunities = [
   },
   {
     number: "03",
-    label: "Demonstração",
-    title: "Dar mais valor percebido ao ato de solicitar uma demonstração",
+    label: "Contato",
+    title: "Transformar o contato em uma entrega consultiva",
     observation:
-      "“Solicitar demonstração” comunica a ação, mas ainda não explica com precisão o que o visitante receberá. A página de contato também atende diferentes necessidades por meio de uma abertura ampla: “Como podemos ajudar?”. Faltam respostas sobre o que será mostrado, se a demo é adaptada, quanto tempo dura e o que acontece depois do envio.",
+      "O site usa “Entrar em contato” como principal chamada comercial. O formulário pede nome, e-mail, empresa e faturamento mensal estimado. A faixa de faturamento qualifica porte, mas o visitante ainda recebe pouca previsibilidade sobre o que acontece depois do envio — se a conversa será comercial ou técnica, se a operação será avaliada e qual resultado levará da conversa.",
     hypothesis:
-      "Para soluções que envolvem mudança de ERP, dados financeiros, automação física ou integração operacional, o visitante pode precisar de mais segurança antes de disponibilizar seus dados. A fricção pode não estar somente no formulário — pode estar na ausência de expectativa clara sobre o encontro.",
+      "Contratar uma solução como o TrinioOS envolve áreas, integrações e decisões operacionais. “Entrar em contato” comunica a ação, mas não evidencia o valor do próximo passo. O visitante pode precisar de mais segurança antes de disponibilizar seus dados.",
     recommendation:
-      "Reposicionar a demonstração como entrega consultiva: “Veja como a Zetti pode conectar estoque, vendas, compras, fiscal e financeiro de acordo com a realidade da sua operação.” Formulário em duas etapas — contato (nome, e-mail, telefone) e contexto da operação (perfil, lojas, solução, desafio, sistema atual) com campos condicionais por solução.",
+      "Reposicionar o contato como primeira leitura consultiva: “Descubra onde o TrinioOS pode gerar mais impacto na sua operação.” CTA: agendar uma análise da operação. Formulário em duas etapas — contato e contexto (faturamento, desafio, plataforma, estrutura, solução de interesse, com opção “Ainda não sei”) e campos condicionais.",
     metrics: [
-      "Expectativa antes do envio",
-      "Contexto para o comercial",
-      "Demos mais personalizadas",
-      "Qualidade da demanda",
+      "Valor percebido no envio",
+      "Expectativa mais clara",
+      "Dor identificada antes da conversa",
+      "Leads mais contextualizados",
     ],
     impact: "Alto",
     effort: "Médio",
@@ -95,53 +95,75 @@ const opportunities = [
 function MiniAudit({ type }: { type: string }) {
   if (type === "paths") {
     return (
-      <div className="mini-window" aria-label="Representação de CTAs genéricos para soluções distintas">
-        <div className="window-top"><span /><span /><span /></div>
+      <div className="mini-window" aria-label="Primeiro bloco com categoria pouco traduzida">
+        <div className="window-top">
+          <span />
+          <span />
+          <span />
+        </div>
         <div className="store-hint">
           <div className="ghost-line wide" />
-          <div className="ghost-products"><i /><i /><i /></div>
+          <div className="ghost-products">
+            <i />
+            <i />
+            <i />
+          </div>
         </div>
         <div className="mock-popup">
-          <b>QUAL SOLUÇÃO?</b>
-          <p>ERP, AI Suite, Gollmann, TechFin…</p>
-          <button>SOLICITAR DEMONSTRAÇÃO</button>
+          <b>COMMERCE ORCHESTRATION?</b>
+          <p>Categoria clara. Resultado ainda distante.</p>
+          <button>ENTRAR EM CONTATO</button>
         </div>
-        <em className="audit-tag">CTA genérico</em>
+        <em className="audit-tag">falta traduzir</em>
       </div>
     );
   }
 
   if (type === "review") {
     return (
-      <div className="quiz-card" aria-label="Ponte entre conteúdo e solução">
-        <small>CONTEÚDO → SOLUÇÃO</small>
-        <h4>De onde veio o interesse?</h4>
+      <div className="quiz-card" aria-label="Portas de entrada por problema">
+        <small>QUAL PROBLEMA VEIO PRIMEIRO?</small>
+        <h4>Por onde começar?</h4>
         <div className="quiz-options">
-          <span>Ruptura de estoque</span>
-          <span className="selected">Conciliação financeira</span>
-          <span>Automação no balcão</span>
+          <span>Conversão no checkout</span>
+          <span className="selected">Margem no fulfillment</span>
+          <span>Operação omnicanal</span>
         </div>
-        <div className="quiz-progress"><i /></div>
-        <button>IR PARA O B.IT →</button>
-        <em className="audit-tag">ponte contextual</em>
+        <div className="quiz-progress">
+          <i />
+        </div>
+        <button>VER JORNADA →</button>
+        <em className="audit-tag">porta de entrada</em>
       </div>
     );
   }
 
   return (
-    <div className="product-card" aria-label="Conceito de demonstração com valor percebido">
-      <div className="coffee-pack"><span>Z</span><small>DEMO</small></div>
+    <div className="product-card" aria-label="Contato como análise consultiva">
+      <div className="coffee-pack">
+        <span>T</span>
+        <small>ANÁLISE</small>
+      </div>
       <div className="product-info">
-        <small>VETOR FARMA</small>
-        <h4>Demo personalizada</h4>
-        <div className="taste"><span>45 min</span><span>Consultiva</span></div>
+        <small>TRINIOOS</small>
+        <h4>Análise da operação</h4>
+        <div className="taste">
+          <span>30 min</span>
+          <span>Consultiva</span>
+        </div>
         <dl>
-          <div><dt>Perfil</dt><dd>Rede farmacêutica</dd></div>
-          <div><dt>Foco</dt><dd>Estoque + fiscal</dd></div>
+          <div>
+            <dt>Foco</dt>
+            <dd>Checkout + margem</dd>
+          </div>
+          <div>
+            <dt>Resultado</dt>
+            <dd>Ponto de partida</dd>
+          </div>
         </dl>
         <button>AGENDAR</button>
       </div>
-      <em className="audit-tag">valor da demo</em>
+      <em className="audit-tag">contato com valor</em>
     </div>
   );
 }
@@ -152,7 +174,9 @@ export default function Home() {
       <section className="hero melive-hero" id="inicio">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span>Sobre a Melive</span> Apresentação</p>
+          <p className="eyebrow">
+            <span>Sobre a Melive</span> Apresentação
+          </p>
           <h1>
             Estratégia, experiência
             <br />
@@ -166,8 +190,8 @@ export default function Home() {
             <a className="button dark" href="#especialidade">
               Como atuamos <span>↓</span>
             </a>
-            <a className="button cream" href="#diagnostico-zetti">
-              Ir ao diagnóstico Zetti <span>→</span>
+            <a className="button cream" href="#diagnostico-trinio">
+              Ir ao diagnóstico Trinio <span>→</span>
             </a>
           </div>
         </div>
@@ -262,17 +286,17 @@ export default function Home() {
         </blockquote>
       </section>
 
-      <section className="melive-bridge" id="diagnostico-zetti">
+      <section className="melive-bridge" id="diagnostico-trinio">
         <div className="melive-bridge-inner">
           <p className="section-index light">A SEGUIR</p>
           <h2>
-            Diagnóstico Zetti.
+            Diagnóstico Trinio.
             <em> Mapa de conversão.</em>
           </h2>
           <p>
-            A partir daqui, a leitura externa do site da Zetti — hipóteses,
-            oportunidades e um piloto recomendado para gerar demonstrações mais
-            qualificadas.
+            A partir daqui, a leitura externa do site da Trinio — hipóteses,
+            oportunidades e um piloto recomendado para gerar oportunidades
+            comerciais mais qualificadas.
           </p>
           <a className="button cream" href="#diagnostico">
             Ver o diagnóstico <span>↓</span>
@@ -283,15 +307,17 @@ export default function Home() {
       <section className="hero diagnosis-hero" id="mapa">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
-          <p className="eyebrow"><span>Mapa de conversão</span> Zetti</p>
+          <p className="eyebrow">
+            <span>Mapa de conversão</span> Trinio
+          </p>
           <h1>
-            Ecossistema forte.
+            Suíte completa.
             <br />
-            <strong>Jornadas mais claras.</strong>
+            <strong>Portas de entrada claras.</strong>
           </h1>
           <p className="hero-lead">
-            Como transformar a força institucional do ecossistema em jornadas
-            mais claras para geração de demonstrações qualificadas.
+            Como transformar a força do TrinioOS em jornadas mais claras para
+            geração de oportunidades comerciais qualificadas.
           </p>
           <div className="hero-actions">
             <a className="button dark" href="#diagnostico">
@@ -315,47 +341,47 @@ export default function Home() {
         <div className="section-index">00 / VISÃO GERAL</div>
         <div className="summary-grid">
           <h2>
-            A marca já comunica
+            A suíte já comunica
             <br />
-            o ecossistema.
+            dimensão.
             <br />
-            <em>Falta a passagem.</em>
+            <em>Falta o ponto de partida.</em>
           </h2>
           <div className="summary-copy">
             <p>
-              A Zetti construiu um posicionamento consistente como ecossistema de
-              inteligência operacional para o varejo farmacêutico — conectando
-              ERP, automação, IA, dados e soluções financeiras. O site cumpre bem
-              a função de apresentar essa dimensão.
+              A Trinio possui três ativos comerciais muito fortes: uma solução
+              tecnologicamente robusta, marcas reconhecidas utilizando a
+              plataforma e resultados relacionados a conversão, margem e
+              eficiência omnicanal.
             </p>
             <blockquote>
-              O principal espaço de evolução está entre “entendi o que é a Zetti”
-              e “entendi qual solução é mais adequada e por que solicitar uma
-              demonstração agora.”
+              O principal espaço de evolução está entre “entendi que o TrinioOS
+              é uma suíte completa” e “reconheci meu problema, identifiquei por
+              onde começar e entendi o valor de conversar com a Trinio.”
             </blockquote>
             <p className="method-note">
               Esta análise foi construída exclusivamente a partir da experiência
-              externa do site, sem acesso a dados de tráfego, conversão, CRM ou
-              desempenho comercial. Os pontos devem ser tratados como hipóteses
-              para validação, não como problemas comprovados.
+              externa do site, sem acesso a dados de tráfego, conversão, CRM,
+              mídia ou desempenho comercial. Os pontos devem ser tratados como
+              hipóteses para validação, não como problemas comprovados.
             </p>
           </div>
         </div>
         <div className="signal-row">
           <div>
             <span>01</span>
-            <b>Jornadas genéricas</b>
-            <small>para soluções distintas</small>
+            <b>Categoria pouco traduzida</b>
+            <small>em resultado concreto</small>
           </div>
           <div>
             <span>02</span>
-            <b>Conteúdo pouco conectado</b>
-            <small>à oferta certa</small>
+            <b>Uma jornada para muitas dores</b>
+            <small>sem porta de entrada</small>
           </div>
           <div>
             <span>03</span>
-            <b>Demo com pouco valor</b>
-            <small>percebido antes do envio</small>
+            <b>Contato sem valor percebido</b>
+            <small>antes do envio</small>
           </div>
         </div>
       </section>
@@ -411,25 +437,34 @@ export default function Home() {
         <div className="split-badge">+</div>
         <div>
           <div className="section-index">PILOTO RECOMENDADO</div>
-          <h2>Uma jornada prioritária.<br /><em>Vetor Farma.</em></h2>
+          <h2>
+            Uma jornada prioritária.
+            <em> Checkout Trinio.</em>
+          </h2>
         </div>
         <div className="split-copy">
           <p>
-            Em vez de redesenhar toda a experiência de uma vez, recomendamos
-            validar uma jornada: landing page de demonstração do Vetor Farma —
-            produto central, público identificável, volume de provas e conexão
-            natural com conteúdos e campanhas.
+            Externamente, o Checkout parece uma boa primeira hipótese de piloto:
+            dor amplamente reconhecida, conexão direta com receita, promessa
+            mensurável, prova de uplift e depoimento relacionado à experiência de
+            compra. A prioridade definitiva deve ser validada com dados internos.
           </p>
           <div className="journeys">
             <article>
               <small>HEADLINE SUGERIDA</small>
-              <h3>Dados em controle para crescer</h3>
-              <p>Sua farmácia já gera os dados. O Vetor Farma transforma esses dados em controle para crescer.</p>
+              <h3>Checkout sem ser o limite</h3>
+              <p>
+                Seu checkout não precisa ser o limite da sua conversão. Checkout
+                headless, frete inteligente e insights em tempo real.
+              </p>
             </article>
             <article>
-              <small>SEGUNDA FRENTE</small>
-              <h3>Landing do Gollmann</h3>
-              <p>Para campanhas e conteúdos de automação, espaço físico, rastreabilidade e velocidade no atendimento.</p>
+              <small>PROVAS EM HISTÓRIAS</small>
+              <h3>Números com decisão</h3>
+              <p>
+                Transformar indicadores em minicasos: desafio, intervenção,
+                resultado e o que tornou o resultado possível.
+              </p>
             </article>
           </div>
         </div>
@@ -438,28 +473,49 @@ export default function Home() {
       <section className="priority-section section" id="prioridades">
         <div className="section-index light">MATRIZ DE DECISÃO</div>
         <div className="priority-head">
-          <h2>Começar onde impacto<br />e velocidade se encontram.</h2>
-          <p>Ordem sugerida para testar sem redesenhar o site institucional.</p>
+          <h2>
+            Começar onde impacto
+            <br />e velocidade se encontram.
+          </h2>
+          <p>
+            Ordem sugerida para testar sem redesenhar o posicionamento
+            institucional.
+          </p>
         </div>
-        <div className="priority-table" role="table" aria-label="Priorização de melhorias">
+        <div
+          className="priority-table"
+          role="table"
+          aria-label="Priorização de melhorias"
+        >
           <div className="table-row table-label" role="row">
-            <span>Mudança</span><span>Impacto</span><span>Esforço</span><span>Ordem</span>
+            <span>Mudança</span>
+            <span>Impacto</span>
+            <span>Esforço</span>
+            <span>Ordem</span>
           </div>
           <div className="table-row" role="row">
-            <b>Landing de demonstração do Vetor Farma</b>
-            <span>Alto</span><span>Médio</span><strong>01</strong>
+            <b>Landing de conversão do Checkout Trinio</b>
+            <span>Alto</span>
+            <span>Médio</span>
+            <strong>01</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Demo com valor percebido e formulário em 2 etapas</b>
-            <span>Alto</span><span>Médio</span><strong>02</strong>
+            <b>Primeiro bloco com resultados reconhecíveis</b>
+            <span>Alto</span>
+            <span>Baixo/médio</span>
+            <strong>02</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Pontes conteúdo → solução (orgânico)</b>
-            <span>Alto</span><span>Médio</span><strong>03</strong>
+            <b>Portas de entrada por problema da operação</b>
+            <span>Alto</span>
+            <span>Médio</span>
+            <strong>03</strong>
           </div>
           <div className="table-row" role="row">
-            <b>Landing dedicada ao Gollmann</b>
-            <span>Alto</span><span>Médio</span><strong>04</strong>
+            <b>Contato como análise consultiva da operação</b>
+            <span>Alto</span>
+            <span>Médio</span>
+            <strong>04</strong>
           </div>
         </div>
       </section>
@@ -468,23 +524,35 @@ export default function Home() {
         <div className="next-shape" aria-hidden="true" />
         <div className="next-copy">
           <div className="section-index">COMO A MELIVE ENTRA</div>
-          <h2>Do diagnóstico<br />à execução.</h2>
+          <h2>
+            Do diagnóstico
+            <br />à execução.
+          </h2>
           <p>
-            A recomendação não é substituir o site institucional. Ele deve continuar
-            apresentando a força do ecossistema Zetti. As landing pages entram como
-            camada complementar de conversão — por solução, campanha, problema,
-            perfil e conteúdo consumido. A Melive entra para desenhar e validar
-            essas jornadas com o comercial.
+            A recomendação não é substituir o posicionamento atual. A assinatura
+            institucional pode continuar. A oportunidade está em construir uma
+            camada complementar: problema reconhecido → solução adequada → prova
+            contextualizada → conversa consultiva. A Melive entra para desenhar e
+            validar essas jornadas com o comercial.
           </p>
           <ol>
-            <li><span>01</span> Priorizar o piloto do Vetor Farma com base nos dados internos</li>
-            <li><span>02</span> Construir a LP, a narrativa da demo e o formulário contextualizado</li>
-            <li><span>03</span> Medir conversão, qualidade do lead e tempo até a demonstração</li>
+            <li>
+              <span>01</span> Validar o piloto do Checkout com dados e prioridade
+              comercial
+            </li>
+            <li>
+              <span>02</span> Construir a LP, a narrativa da análise e o
+              formulário contextualizado
+            </li>
+            <li>
+              <span>03</span> Medir conversão, qualidade do lead e tempo até a
+              conversa
+            </li>
           </ol>
           <div className="hero-actions next-actions">
             <a
               className="button cream whatsapp-cta"
-              href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Melive%20sobre%20como%20executar%20o%20diagn%C3%B3stico%20da%20Zetti."
+              href="https://wa.me/5512992477878?text=Ol%C3%A1!%20Quero%20conversar%20com%20a%20Melive%20sobre%20como%20executar%20o%20diagn%C3%B3stico%20da%20Trinio."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -504,20 +572,24 @@ export default function Home() {
               </span>
               <span aria-hidden="true">↗</span>
             </a>
-            <a className="button dark" href="/proposta">
-              Ver proposta comercial <span>→</span>
-            </a>
           </div>
         </div>
         <div className="next-mark">
           <img src="/melive-logo.png" alt="" />
-          <p>Uma marca integrada não precisa<br />oferecer uma jornada única.</p>
+          <p>
+            Uma suíte pode ser completa sem exigir
+            <br />
+            que o visitante compreenda tudo antes.
+          </p>
         </div>
       </section>
 
       <footer>
         <img src="/melive-logo.png" alt="Melive" />
-        <p>Diagnóstico preliminar da jornada de conversão • Zetti • Agosto de 2026</p>
+        <p>
+          Diagnóstico preliminar da jornada de conversão • Trinio • Agosto de
+          2026
+        </p>
         <a href="#inicio">Voltar ao topo ↑</a>
       </footer>
     </main>

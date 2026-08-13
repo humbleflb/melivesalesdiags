@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Zetti — Melive",
+  title: "Diagnóstico Trinio — Melive",
   description:
-    "Mapa de conversão da Zetti: jornadas mais claras para demonstrações qualificadas.",
+    "Mapa de conversão da Trinio: jornadas mais claras para oportunidades comerciais qualificadas.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

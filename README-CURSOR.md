@@ -1,6 +1,6 @@
-# Diagnóstico Zetti — Melive
+# Diagnóstico Trinio — Melive
 
-Projeto-fonte da página de diagnóstico criada para a Zetti.
+Projeto-fonte da página de diagnóstico criada para a Trinio.
 
 ## Abrir no Cursor
 
@@ -21,21 +21,6 @@ O projeto usa vinext + Nitro. No Netlify:
 
 - Build command: `npm run build`
 - Publish directory: `dist`
-- Node: `22`
+- Node: 22
 
-Configuração já está em `netlify.toml`. Build local:
-
-```bash
-npm run build
-```
-
-## Arquivos principais
-
-- `app/page.tsx`: conteúdo e estrutura da página.
-- `app/globals.css`: identidade visual, layout e responsividade.
-- `public/melive-logo.png`: logo utilizada na página.
-
-## Observação
-
-O projeto usa React/Vinext. A estrutura visual é escrita em JSX/TSX, que funciona
-como o HTML da página e permite editar o conteúdo diretamente no Cursor.
+Não use o plugin `@netlify/plugin-nextjs` — este app é vinext/Nitro.

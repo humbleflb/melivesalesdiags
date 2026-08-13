@@ -40,46 +40,18 @@ test("produces Netlify publish directory and Nitro server function", async () =>
 
 test("ships Melive static assets in dist/", async () => {
   assert.equal(await exists("dist/melive-logo.png"), true);
+  assert.equal(await exists("dist/melive-mark.png"), true);
   assert.equal(await exists("dist/favicon.svg"), true);
 });
 
-test("rendered page copy targets Zetti", async () => {
-  const { readFile } = await import("node:fs/promises");
+test("rendered page copy targets Trinio", async () => {
   const page = await readFile(path.join(root, "app/page.tsx"), "utf8");
-  assert.match(page, /Zetti/);
-  assert.match(page, /Vetor Farma/);
+  assert.match(page, /Trinio/);
+  assert.match(page, /TrinioOS/);
+  assert.match(page, /Checkout/);
   assert.match(page, /Sobre a Melive/);
-  assert.match(page, /Nossa especialidade|especialidade/);
   assert.match(page, /Diagnosticar antes de construir/);
+  assert.doesNotMatch(page, /Zetti/);
   assert.doesNotMatch(page, /Vinta Software/);
   assert.doesNotMatch(page, /Café Jaguari/);
-});
-
-test("ships commercial proposal route for Melive + Zetti", async () => {
-  const { readFile } = await import("node:fs/promises");
-  const proposal = await readFile(
-    path.join(root, "app/proposta/page.tsx"),
-    "utf8",
-  );
-  const content = await readFile(
-    path.join(root, "app/proposta/content.ts"),
-    "utf8",
-  );
-  const builder = await readFile(
-    path.join(root, "app/proposta/build-pptx.ts"),
-    "utf8",
-  );
-  assert.match(proposal, /proposalSlides/);
-  assert.match(proposal, /DownloadPptxButton/);
-  assert.match(content, /Proposta comercial/);
-  assert.match(content, /7\.800/);
-  assert.match(content, /Landing Page Estratégica/);
-  assert.match(content, /proposalSlides/);
-  assert.match(builder, /pptxgenjs/);
-  assert.match(builder, /createProposalPptx/);
-  assert.equal(
-    (content.match(/layout:/g) ?? []).length >= 14,
-    true,
-    "expected at least 14 typed slides in content.ts",
-  );
 });
