@@ -7,8 +7,8 @@ import {
   PPTX_FILENAME,
   buildProposalPptxBuffer,
   createProposalPptx,
-} from "../app/proposta/build-pptx.ts";
-import { proposalSlides } from "../app/proposta/content.ts";
+} from "../app/zetti/proposta/build-pptx.ts";
+import { proposalSlides } from "../app/zetti/proposta/content.ts";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -27,7 +27,7 @@ test("proposal PPTX writes a valid ZIP buffer", async () => {
 
 test("proposal PPTX uses Melive web typography", async () => {
   const source = await readFile(
-    path.join(root, "app/proposta/build-pptx.ts"),
+    path.join(root, "app/zetti/proposta/build-pptx.ts"),
     "utf8",
   );
   assert.match(source, /display:\s*"Impact"/);

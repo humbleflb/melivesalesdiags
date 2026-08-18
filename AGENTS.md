@@ -2,17 +2,29 @@
 
 ## Cursor Cloud specific instructions
 
-Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Zetti** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). Commercial proposal lives at `/proposta` (`app/proposta/page.tsx`); slide copy source of truth is `app/proposta/content.ts`; PPTX export via `app/proposta/build-pptx.ts` + download button. **Production target: Netlify** via Nitro. No Docker/DB server required locally.
+Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial proposals. **Root `/` lists every client.** Each client lives on its own route (`/zetti`, `/trinio`, …) on the **same branch** — do not create a new git branch per client.
+
+### Routes
+
+- `/` — client menu (`app/page.tsx`), catalog in `app/clients.ts`
+- `/zetti` — Zetti diagnosis (`app/zetti/page.tsx`)
+- `/zetti/proposta` — Zetti commercial proposal (`app/zetti/proposta/`)
+- `/trinio` — Trinio diagnosis (`app/trinio/page.tsx`)
+- `/proposta` — redirect to `/zetti/proposta`
+
+Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.
+
+To add a client: create `app/<slug>/page.tsx`, register it in `app/clients.ts`.
 
 ### Commands
 
 See `package.json` / `README-CURSOR.md`. In practice:
 
 - **Dev:** `npm run dev` → `http://localhost:5173/` (`0.0.0.0`)
-- **Lint:** `npm run lint` (existing `@next/next/no-img-element` warnings in `app/page.tsx` are OK)
+- **Lint:** `npm run lint` (existing `@next/next/no-img-element` warnings are OK)
 - **Build (Netlify):** `npm run build` → sets `NITRO_PRESET=netlify` locally; on Netlify CI Nitro auto-detects
 - **Local Node prod smoke:** `npm start` rebuilds with `NITRO_PRESET=node` and runs `.output/server/index.mjs` (`vite preview` does not work with the Netlify preset)
-- **Test:** `npm test` = Netlify build + `tests/netlify-build.test.mjs`
+- **Test:** `npm test` = Netlify build + `tests/netlify-build.test.mjs` + PPTX checks
 
 ### Netlify
 

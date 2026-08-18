@@ -1,5 +1,5 @@
 {
-  "name": "diagnostico-zetti",
+  "name": "propostas-melive",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -40,5 +40,5 @@
     "vite": "8.0.13"
   },
   "type": "module",
-  "displayName": "Diagnóstico Zetti — Melive"
+  "displayName": "Propostas Melive"
 }

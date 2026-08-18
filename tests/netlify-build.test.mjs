@@ -40,33 +40,48 @@ test("produces Netlify publish directory and Nitro server function", async () =>
 
 test("ships Melive static assets in dist/", async () => {
   assert.equal(await exists("dist/melive-logo.png"), true);
+  assert.equal(await exists("dist/melive-mark.png"), true);
   assert.equal(await exists("dist/favicon.svg"), true);
 });
 
-test("rendered page copy targets Zetti", async () => {
-  const { readFile } = await import("node:fs/promises");
-  const page = await readFile(path.join(root, "app/page.tsx"), "utf8");
+test("hub lists allocated client proposals", async () => {
+  const hub = await readFile(path.join(root, "app/page.tsx"), "utf8");
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(hub, /Biblioteca de propostas|clientes/i);
+  assert.match(catalog, /slug: "zetti"/);
+  assert.match(catalog, /slug: "trinio"/);
+  assert.match(catalog, /href: "\/zetti"/);
+  assert.match(catalog, /href: "\/trinio"/);
+  assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
+});
+
+test("Zetti diagnosis lives at /zetti", async () => {
+  const page = await readFile(path.join(root, "app/zetti/page.tsx"), "utf8");
   assert.match(page, /Zetti/);
   assert.match(page, /Vetor Farma/);
-  assert.match(page, /Sobre a Melive/);
-  assert.match(page, /Nossa especialidade|especialidade/);
-  assert.match(page, /Diagnosticar antes de construir/);
-  assert.doesNotMatch(page, /Vinta Software/);
-  assert.doesNotMatch(page, /Café Jaguari/);
+  assert.match(page, /\/zetti\/proposta/);
+  assert.doesNotMatch(page, /TrinioOS/);
+});
+
+test("Trinio diagnosis lives at /trinio", async () => {
+  const page = await readFile(path.join(root, "app/trinio/page.tsx"), "utf8");
+  assert.match(page, /Trinio/);
+  assert.match(page, /TrinioOS/);
+  assert.match(page, /Checkout/);
+  assert.doesNotMatch(page, /Vetor Farma/);
 });
 
 test("ships commercial proposal route for Melive + Zetti", async () => {
-  const { readFile } = await import("node:fs/promises");
   const proposal = await readFile(
-    path.join(root, "app/proposta/page.tsx"),
+    path.join(root, "app/zetti/proposta/page.tsx"),
     "utf8",
   );
   const content = await readFile(
-    path.join(root, "app/proposta/content.ts"),
+    path.join(root, "app/zetti/proposta/content.ts"),
     "utf8",
   );
   const builder = await readFile(
-    path.join(root, "app/proposta/build-pptx.ts"),
+    path.join(root, "app/zetti/proposta/build-pptx.ts"),
     "utf8",
   );
   assert.match(proposal, /proposalSlides/);
@@ -74,7 +89,6 @@ test("ships commercial proposal route for Melive + Zetti", async () => {
   assert.match(content, /Proposta comercial/);
   assert.match(content, /7\.800/);
   assert.match(content, /Landing Page Estratégica/);
-  assert.match(content, /proposalSlides/);
   assert.match(builder, /pptxgenjs/);
   assert.match(builder, /createProposalPptx/);
   assert.equal(
