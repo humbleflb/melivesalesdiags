@@ -31,4 +31,14 @@ export const clients: ClientWork[] = [
     year: "2026",
     kind: "Diagnóstico",
   },
+  {
+    slug: "recursim",
+    name: "RecurSIM",
+    sector: "Recursos de trânsito",
+    summary:
+      "POC de 90 dias para validar aquisição: tráfego qualificado até recurso pago.",
+    href: "/recursim",
+    year: "2026",
+    kind: "Proposta",
+  },
 ];

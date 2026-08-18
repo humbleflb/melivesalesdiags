@@ -50,8 +50,10 @@ test("hub lists allocated client proposals", async () => {
   assert.match(hub, /Biblioteca de propostas|clientes/i);
   assert.match(catalog, /slug: "zetti"/);
   assert.match(catalog, /slug: "trinio"/);
+  assert.match(catalog, /slug: "recursim"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
+  assert.match(catalog, /href: "\/recursim"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
 });
 
@@ -96,4 +98,25 @@ test("ships commercial proposal route for Melive + Zetti", async () => {
     true,
     "expected at least 14 typed slides in content.ts",
   );
+});
+
+test("RecurSIM proposal lives at /recursim with slide keyboard nav", async () => {
+  const page = await readFile(path.join(root, "app/recursim/page.tsx"), "utf8");
+  const nav = await readFile(
+    path.join(root, "app/components/SlideKeyboardNav.tsx"),
+    "utf8",
+  );
+  assert.match(page, /RecurSIM/);
+  assert.match(page, /8\.400/);
+  assert.match(page, /custo por recurso pago/i);
+  assert.match(page, /data-slide/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    19,
+    "expected 19 slide anchors on /recursim",
+  );
+  assert.match(nav, /PageDown/);
+  assert.match(nav, /scrollIntoView/);
+  assert.match(nav, /event\.preventDefault/);
 });
