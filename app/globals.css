@@ -530,39 +530,7 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 @media print {
   .button { border: 1px solid currentColor; }
   .opportunity { break-inside: avoid; }
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  .deck-progress-track,
-  .hero-lines,
-  footer,
-  footer img { display: none !important; }
-
-  .deck-slide {
-    display: block !important;
-    min-height: auto !important;
-    padding: 22mm 14mm !important;
-    overflow: visible !important;
-    break-inside: avoid-page;
-    page-break-inside: avoid;
-    break-before: page;
-    page-break-before: always;
-  }
-
-  .deck-slide:first-of-type {
-    break-before: auto;
-    page-break-before: auto;
-  }
-
-  .deck,
-  .deck-inner {
-    display: block !important;
-  }
-
-  .deck-inner {
-    max-width: none !important;
-  }
+  footer { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
