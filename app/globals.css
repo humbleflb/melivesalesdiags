@@ -1116,6 +1116,33 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   color: var(--cream);
 }
 
+.deck-cta-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 42px;
+  max-width: 780px;
+}
+.deck-cta-pair article {
+  background: rgba(236, 228, 212, .08);
+  border-top: 5px solid var(--yellow);
+  padding: 24px 22px;
+}
+.deck-cta-pair small {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  color: var(--yellow);
+}
+.deck-cta-pair p {
+  margin: 12px 0 0;
+  font: 700 clamp(18px, 2.4vw, 24px)/1.2 Arial, sans-serif;
+  color: var(--cream);
+}
+@media (max-width: 650px) {
+  .deck-cta-pair { grid-template-columns: 1fr; }
+}
+
 .deck-check {
   list-style: none;
   margin: 0;

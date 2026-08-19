@@ -385,14 +385,14 @@ export default function TrinioPropostaPage() {
             Checkout headless, frete inteligente e insights em tempo real para
             reduzir fricções e transformar mais jornadas em vendas.
           </p>
-          <div className="deck-cover-meta">
+          <div className="deck-cta-pair">
             <article>
               <small>CTA PRINCIPAL</small>
-              <b>Descobrir oportunidades no meu checkout</b>
+              <p>Descobrir oportunidades no meu checkout</p>
             </article>
             <article>
               <small>ENTREGA DO CONTATO</small>
-              <b>Conversa consultiva: fricções, cenário e impacto</b>
+              <p>Conversa consultiva: fricções, cenário e impacto</p>
             </article>
           </div>
         </div>
