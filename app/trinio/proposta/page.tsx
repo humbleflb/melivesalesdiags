@@ -163,10 +163,10 @@ const deliverables = [
   "GTM, GA4, UTMs e eventos",
   "Dashboard básico de acompanhamento",
   "Documentação dos eventos",
-  "Acompanhamento por 30 dias",
-  "Uma rodada de otimização",
-  "Relatório final com aprendizados",
-  "Recomendações para o próximo ciclo",
+  "Acompanhamento por 90 dias",
+  "Até três rodadas de otimização",
+  "Relatórios mensais com aprendizados",
+  "Relatório final e recomendações para o próximo ciclo",
 ];
 
 const timeline = [
@@ -174,7 +174,7 @@ const timeline = [
   { phase: "Etapa 2", title: "Arquitetura e copy", time: "4–5 dias úteis" },
   { phase: "Etapa 3", title: "Design e aprovação", time: "5–6 dias úteis" },
   { phase: "Etapa 4", title: "Desenvolvimento e publicação", time: "6–7 dias úteis" },
-  { phase: "Etapa 5", title: "Validação", time: "30 dias após publicação" },
+  { phase: "Etapa 5", title: "Validação", time: "90 dias após publicação" },
 ];
 
 const meliveResponsibilities = [
@@ -184,7 +184,8 @@ const meliveResponsibilities = [
   "Coordenar o cronograma",
   "Testes de funcionamento",
   "Publicar a experiência",
-  "Acompanhar dados durante a validação",
+  "Acompanhar dados durante os 90 dias de validação",
+  "Conduzir até três rodadas de otimização",
   "Recomendar ajustes e próximos passos",
 ];
 
@@ -209,7 +210,7 @@ const exclusions = [
   "Hospedagem ou infraestrutura",
   "Desenvolvimento ou customização de CRM",
   "Integrações complexas sem documentação ou API",
-  "Gestão contínua após os 30 dias",
+  "Gestão contínua após os 90 dias",
 ];
 
 const nextJourneys = [
@@ -260,7 +261,7 @@ export default function TrinioPropostaPage() {
             </article>
             <article>
               <small>VALIDAÇÃO</small>
-              <b>30 dias</b>
+              <b>90 dias</b>
             </article>
           </div>
         </div>
@@ -492,13 +493,13 @@ export default function TrinioPropostaPage() {
         </div>
       </section>
 
-      {/* 12 — Validação 30 dias */}
+      {/* 12 — Validação 90 dias */}
       <section className="deck-slide deck-green" data-slide id="validacao">
         <div className="deck-inner">
-          <p className="section-index light">11 / VALIDAÇÃO · 30 DIAS</p>
+          <p className="section-index light">11 / VALIDAÇÃO · 90 DIAS</p>
           <h2>
-            Acompanhamento pós-publicação.
-            <em> Otimização e relatório.</em>
+            90 dias de acompanhamento.
+            <em> Otimizações contínuas.</em>
           </h2>
           <ul className="deck-check light">
             {validationItems.map((item, i) => (
@@ -509,8 +510,9 @@ export default function TrinioPropostaPage() {
             ))}
           </ul>
           <p className="deck-foot cream-text">
-            Inclui uma rodada de otimização e relatório final. Conclusões
-            dependem do volume de tráfego e oportunidades geradas.
+            Inclui até três rodadas de otimização, relatórios mensais e
+            relatório final. Conclusões dependem do volume de tráfego e
+            oportunidades geradas durante o período.
           </p>
         </div>
       </section>
@@ -540,7 +542,7 @@ export default function TrinioPropostaPage() {
           <p className="section-index">13 / CRONOGRAMA</p>
           <h2>
             18 a 22 dias úteis.
-            <em> Mais 30 de validação.</em>
+            <em> Mais 90 de validação.</em>
           </h2>
           <div className="deck-months">
             {timeline.map((t) => (
@@ -604,8 +606,8 @@ export default function TrinioPropostaPage() {
                 R$ <b>9.800</b>
               </p>
               <span>
-                Estratégia, copy, UX/UI, dev, mensuração, publicação, 30 dias de
-                acompanhamento, otimização e relatório
+                Estratégia, copy, UX/UI, dev, mensuração, publicação, 90 dias de
+                acompanhamento, otimizações e relatórios
               </span>
             </article>
             <article>
