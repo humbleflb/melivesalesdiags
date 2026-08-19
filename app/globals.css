@@ -530,16 +530,13 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 @media print {
   .button { border: 1px solid currentColor; }
   .opportunity { break-inside: avoid; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
   .deck-progress-track,
   .hero-lines,
   footer img { display: none !important; }
-
-  .deck,
-  .deck-slide,
-  .deck-inner {
-    background: #fff !important;
-    color: #111 !important;
-  }
 
   .deck-slide {
     min-height: auto !important;
@@ -551,36 +548,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .deck-slide:last-of-type {
     break-after: auto;
     page-break-after: auto;
-  }
-
-  .deck h1,
-  .deck h2,
-  .deck h3,
-  .deck p,
-  .deck li,
-  .deck small,
-  .deck span,
-  .deck b,
-  .deck em,
-  .deck strong,
-  .deck .section-index,
-  .deck .cream-text {
-    color: #111 !important;
-  }
-
-  .deck em,
-  .deck strong { font-style: normal; }
-
-  .deck .deck-cover-meta article,
-  .deck .deck-cta-pair article,
-  .deck .deck-months article,
-  .deck .deck-mosaic article,
-  .deck .deck-price-row article,
-  .deck .deck-funnel li,
-  .deck .deck-pills li {
-    background: #fff !important;
-    border-color: #999 !important;
-    color: #111 !important;
   }
 
   .deck footer {
