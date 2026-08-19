@@ -540,8 +540,10 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   footer img { display: none !important; }
 
   .deck-slide {
+    display: block !important;
     min-height: auto !important;
     padding: 22mm 14mm !important;
+    overflow: visible !important;
     break-inside: avoid-page;
     page-break-inside: avoid;
     break-before: page;
@@ -551,6 +553,15 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .deck-slide:first-of-type {
     break-before: auto;
     page-break-before: auto;
+  }
+
+  .deck,
+  .deck-inner {
+    display: block !important;
+  }
+
+  .deck-inner {
+    max-width: none !important;
   }
 }
 
