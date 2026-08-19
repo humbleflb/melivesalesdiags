@@ -365,7 +365,7 @@ export default function TrinioPropostaPage() {
             Uma jornada específica
             <em> gera mais conversas qualificadas.</em>
           </h2>
-          <blockquote className="deck-offer cream-text">
+          <blockquote className="deck-offer">
             Se uma liderança de e-commerce acessar uma jornada construída para
             seus desafios de conversão, encontrará menos complexidade para
             compreender a oferta e mais clareza para avançar.
@@ -692,7 +692,7 @@ export default function TrinioPropostaPage() {
               <li key={item}>{item}</li>
             ))}
           </ul>
-          <p className="hero-lead cream-text">
+          <p className="hero-lead">
             Kickoff com as áreas comercial, marketing e produto para validar a
             prioridade do Checkout, reunir materiais e iniciar a jornada.
           </p>

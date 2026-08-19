@@ -1104,6 +1104,17 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   font: 22px/.95 Impact, "Arial Narrow", Arial, sans-serif;
   text-transform: uppercase;
 }
+.deck-ink .deck-cover-meta article,
+.deck-green .deck-cover-meta article {
+  background: rgba(236, 228, 212, .08);
+  border-top-color: var(--yellow);
+}
+.deck-ink .deck-cover-meta b,
+.deck-green .deck-cover-meta b {
+  font-size: 26px;
+  line-height: 1.1;
+  color: var(--cream);
+}
 
 .deck-check {
   list-style: none;
@@ -1153,7 +1164,18 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.25;
   margin: 12px 0 28px;
+  color: var(--ink);
 }
+.deck-ink .deck-offer { color: var(--cream); }
+.deck-form-label {
+  font: 900 13px/1 Arial, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+.deck-form-label.cream-text { color: var(--cream); }
+
 .deck-aside {
   max-width: 760px;
   font-size: 17px;
@@ -1212,6 +1234,7 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-mosaic article {
   background: var(--white);
+  color: var(--ink);
   padding: 28px 24px;
   border-top: 6px solid var(--green);
   min-height: 200px;
@@ -1220,7 +1243,7 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 .deck-mosaic article:nth-child(even) { border-top-color: var(--yellow); }
 .deck-mosaic article:hover { transform: translateY(-4px); }
 .deck-mosaic span { color: var(--green); font: 32px Impact, sans-serif; }
-.deck-mosaic h3 { margin: 12px 0; font-size: 28px; line-height: 1; }
+.deck-mosaic h3 { margin: 12px 0; font-size: 28px; line-height: 1; color: var(--ink); }
 .deck-mosaic p { margin: 0; font-size: 15px; color: #555; }
 
 .deck-pills {
@@ -1232,11 +1255,18 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   gap: 10px;
 }
 .deck-pills li {
-  background: rgba(236, 228, 212, .1);
-  border: 1px solid rgba(236, 228, 212, .28);
+  background: rgba(47, 47, 48, .06);
+  border: 1px solid rgba(47, 47, 48, .18);
   padding: 12px 14px;
   font-weight: 800;
   font-size: 14px;
+  color: var(--ink);
+}
+.deck-ink .deck-pills li,
+.deck-green .deck-pills li {
+  background: rgba(236, 228, 212, .1);
+  border-color: rgba(236, 228, 212, .28);
+  color: var(--cream);
 }
 
 .deck-theme-grid {
@@ -1260,13 +1290,14 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-months article {
   background: var(--white);
+  color: var(--ink);
   padding: 26px 22px;
   border-top: 8px solid var(--yellow);
 }
 .deck-months article:nth-child(2) { border-top-color: var(--green); }
 .deck-months article:nth-child(3) { border-top-color: var(--ink); }
-.deck-months small { font-weight: 900; letter-spacing: .1em; }
-.deck-months h3 { margin: 10px 0 16px; font-size: 32px; }
+.deck-months small { font-weight: 900; letter-spacing: .1em; color: var(--ink); }
+.deck-months h3 { margin: 10px 0 16px; font-size: 32px; color: var(--ink); }
 .deck-months ul { margin: 0; padding-left: 18px; }
 .deck-months li { margin: 6px 0; font-size: 14px; }
 
