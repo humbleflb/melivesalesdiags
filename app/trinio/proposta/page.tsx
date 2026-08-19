@@ -234,7 +234,7 @@ export default function TrinioPropostaPage() {
       <SlideKeyboardNav />
 
       {/* 1 — Cover */}
-      <section className="deck-slide deck-green" data-slide id="inicio">
+      <section className="deck-slide deck-cover" data-slide id="inicio">
         <div className="hero-lines" aria-hidden="true" />
         <div className="deck-inner">
           <p className="eyebrow">
@@ -245,7 +245,7 @@ export default function TrinioPropostaPage() {
             <br />
             <strong>para o Trinio Checkout.</strong>
           </h1>
-          <p className="hero-lead cream-text">
+          <p className="hero-lead">
             Transformar uma solução robusta em uma jornada comercial mais clara,
             específica e mensurável.
           </p>
@@ -315,7 +315,7 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 4 — Recomendação */}
-      <section className="deck-slide deck-yellow" data-slide id="recomendacao">
+      <section className="deck-slide deck-cream" data-slide id="recomendacao">
         <div className="deck-inner">
           <p className="section-index">03 / A RECOMENDAÇÃO</p>
           <h2>
@@ -357,7 +357,7 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 6 — Hipótese */}
-      <section className="deck-slide deck-ink" data-slide id="hipotese">
+      <section className="deck-slide deck-green" data-slide id="hipotese">
         <div className="deck-inner deck-question">
           <p className="section-index light">05 / HIPÓTESE CENTRAL</p>
           <h2>
@@ -373,7 +373,7 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 7 — Conceito */}
-      <section className="deck-slide deck-green" data-slide id="conceito">
+      <section className="deck-slide deck-ink" data-slide id="conceito">
         <div className="deck-inner">
           <p className="section-index light">06 / CONCEITO SUGERIDO</p>
           <h2>
@@ -555,7 +555,7 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 15 — Responsabilidades */}
-      <section className="deck-slide deck-ink" data-slide id="responsabilidades">
+      <section className="deck-slide deck-green" data-slide id="responsabilidades">
         <div className="deck-inner deck-split">
           <div>
             <p className="section-index light">14 / RESPONSABILIDADES</p>
@@ -590,9 +590,9 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 16 — Investimento */}
-      <section className="deck-slide deck-yellow" data-slide id="investimento">
+      <section className="deck-slide deck-ink" data-slide id="investimento">
         <div className="deck-inner">
-          <p className="section-index">15 / INVESTIMENTO</p>
+          <p className="section-index light">15 / INVESTIMENTO</p>
           <h2>
             Projeto-piloto
             <em> de conversão.</em>
@@ -674,7 +674,7 @@ export default function TrinioPropostaPage() {
       </section>
 
       {/* 19 — Resultado esperado / CTA */}
-      <section className="deck-slide deck-cover deck-close deck-green" data-slide id="proximo">
+      <section className="deck-slide deck-cover deck-close" data-slide id="proximo">
         <div className="hero-lines" aria-hidden="true" />
         <div className="deck-inner">
           <p className="eyebrow">
