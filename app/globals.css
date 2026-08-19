@@ -544,13 +544,13 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
     padding: 22mm 14mm !important;
     break-inside: avoid-page;
     page-break-inside: avoid;
-    break-after: page;
-    page-break-after: always;
+    break-before: page;
+    page-break-before: always;
   }
 
-  .deck-slide:last-of-type {
-    break-after: auto;
-    page-break-after: auto;
+  .deck-slide:first-of-type {
+    break-before: auto;
+    page-break-before: auto;
   }
 }
 
