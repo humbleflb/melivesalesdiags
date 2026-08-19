@@ -536,11 +536,14 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   }
   .deck-progress-track,
   .hero-lines,
+  footer,
   footer img { display: none !important; }
 
   .deck-slide {
     min-height: auto !important;
     padding: 22mm 14mm !important;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
     break-after: page;
     page-break-after: always;
   }
@@ -548,11 +551,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   .deck-slide:last-of-type {
     break-after: auto;
     page-break-after: auto;
-  }
-
-  .deck footer {
-    border-top: 1px solid #bbb !important;
-    color: #444 !important;
   }
 }
 
