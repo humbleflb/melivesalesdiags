@@ -1405,6 +1405,33 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   text-transform: uppercase;
 }
 
+/* Plano B: rota estável para exportação PDF da Trinio */
+.trinio-pdf-export .deck-progress-track,
+.trinio-pdf-export .hero-lines,
+.trinio-pdf-export footer {
+  display: none !important;
+}
+
+.trinio-pdf-export .deck-slide {
+  min-height: auto !important;
+  padding: 18mm 14mm !important;
+  overflow: visible !important;
+}
+
+@media print {
+  .trinio-pdf-export .deck-slide {
+    break-before: page;
+    page-break-before: always;
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .trinio-pdf-export .deck-slide:first-of-type {
+    break-before: auto;
+    page-break-before: auto;
+  }
+}
+
 @media (max-width: 980px) {
   .deck-split,
   .deck-funnel,

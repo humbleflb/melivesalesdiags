@@ -91,6 +91,16 @@ test("Trinio proposal lives at /trinio/proposta with slide nav", async () => {
   );
 });
 
+test("Trinio PDF route wraps proposal for stable export", async () => {
+  const page = await readFile(
+    path.join(root, "app/trinio/proposta/pdf/page.tsx"),
+    "utf8",
+  );
+  assert.match(page, /trinio-pdf-export/);
+  assert.match(page, /TrinioPropostaPage/);
+  assert.match(page, /Versão estável para exportação em PDF/);
+});
+
 test("ships commercial proposal route for Melive + Zetti", async () => {
   const proposal = await readFile(
     path.join(root, "app/zetti/proposta/page.tsx"),
