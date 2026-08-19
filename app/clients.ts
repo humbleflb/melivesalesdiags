@@ -28,8 +28,9 @@ export const clients: ClientWork[] = [
     summary:
       "Jornadas mais claras para o TrinioOS e piloto de conversão do Checkout.",
     href: "/trinio",
+    proposalHref: "/trinio/proposta",
     year: "2026",
-    kind: "Diagnóstico",
+    kind: "Proposta",
   },
   {
     slug: "recursim",

@@ -55,6 +55,7 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
+  assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
 });
 
 test("Zetti diagnosis lives at /zetti", async () => {
@@ -71,6 +72,23 @@ test("Trinio diagnosis lives at /trinio", async () => {
   assert.match(page, /TrinioOS/);
   assert.match(page, /Checkout/);
   assert.doesNotMatch(page, /Vetor Farma/);
+});
+
+test("Trinio proposal lives at /trinio/proposta with slide nav", async () => {
+  const page = await readFile(
+    path.join(root, "app/trinio/proposta/page.tsx"),
+    "utf8",
+  );
+  assert.match(page, /Trinio Checkout/);
+  assert.match(page, /9\.800/);
+  assert.match(page, /data-slide/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.match(page, /hipótese|jornada específica/i);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    19,
+    "expected 19 slide anchors on /trinio/proposta",
+  );
 });
 
 test("ships commercial proposal route for Melive + Zetti", async () => {

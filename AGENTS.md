@@ -10,6 +10,7 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/zetti` — Zetti diagnosis (`app/zetti/page.tsx`)
 - `/zetti/proposta` — Zetti commercial proposal (`app/zetti/proposta/`)
 - `/trinio` — Trinio diagnosis (`app/trinio/page.tsx`)
+- `/trinio/proposta` — Trinio commercial proposal / pilot (`app/trinio/proposta/page.tsx`); deck with slide nav
 - `/recursim` — RecurSIM acquisition proposal (`app/recursim/page.tsx`); Page Down/Up jumps between slides
 - `/proposta` — redirect to `/zetti/proposta`
 
