@@ -528,8 +528,18 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 
 @media print {
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
   .button { border: 1px solid currentColor; }
   .opportunity { break-inside: avoid; }
+  .deck,
+  .deck-slide {
+    position: static !important;
+  }
+  .deck-progress-track { display: none !important; }
   footer { display: none !important; }
 }
 
