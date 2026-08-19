@@ -104,11 +104,8 @@ export function SlideKeyboardNav() {
   }, []);
 
   return (
-    <>
-      <div className="deck-progress-track" aria-hidden="true">
-        <i data-slide-progress />
-      </div>
-      <p className="deck-hint">Page Down · próximo slide</p>
-    </>
+    <div className="deck-progress-track" aria-hidden="true">
+      <i data-slide-progress />
+    </div>
   );
 }

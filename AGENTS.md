@@ -34,6 +34,11 @@ See `package.json` / `README-CURSOR.md`. In practice:
 - Do **not** use `@netlify/plugin-nextjs` (UI or toml). This app is vinext/Nitro; that plugin looks for `.next` and fails. `NETLIFY_NEXT_PLUGIN_SKIP=true` is set in `netlify.toml`; also uninstall the plugin in Netlify UI if it was auto-enabled.
 - Do **not** use the Cloudflare/`vinext deploy` path for this project
 
+### Rules
+
+- **No links in diagnosis/proposal footers.** The footer must never contain links to `/`, other routes, or any external URL. Presentations are often shared as PDF; internal navigation links must not leak to clients. Close the presentation content and end — no link back to the hub.
+- **No visible "Page Down" hint badge.** Keyboard navigation exists but must not show a visible tooltip/chip on the page (the progress bar is OK).
+
 ### Gotchas
 
 - `vite.config.ts` uses `@tailwindcss/vite` + `vinext` + `nitro`. Tailwind via PostCSS-only (`@import "tailwindcss"` without the Vite plugin) fails under the Nitro CSS pipeline.
