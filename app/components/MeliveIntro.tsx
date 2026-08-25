@@ -42,7 +42,7 @@ export function MeliveIntro({
 }) {
   return (
     <>
-      <section className="hero melive-hero" id="inicio">
+      <section className="hero melive-hero" data-slide id="inicio">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow">
@@ -71,7 +71,7 @@ export function MeliveIntro({
         </div>
       </section>
 
-      <section className="summary section" id="sobre-melive">
+      <section className="summary section" data-slide id="sobre-melive">
         <div className="section-index">01 / SOBRE A MELIVE</div>
         <div className="summary-grid">
           <h2>
@@ -100,7 +100,7 @@ export function MeliveIntro({
         </div>
       </section>
 
-      <section className="melive-specialty section" id="especialidade">
+      <section className="melive-specialty section" data-slide id="especialidade">
         <div className="section-index light">02 / NOSSA ESPECIALIDADE</div>
         <div className="melive-specialty-grid">
           <div>
@@ -129,7 +129,7 @@ export function MeliveIntro({
         </p>
       </section>
 
-      <section className="melive-method section" id="metodo">
+      <section className="melive-method section" data-slide id="metodo">
         <div className="section-index">03 / NOSSA FORMA DE PENSAR</div>
         <div className="melive-method-head">
           <h2>
@@ -157,7 +157,7 @@ export function MeliveIntro({
         </blockquote>
       </section>
 
-      <section className="melive-bridge" id={bridgeId}>
+      <section className="melive-bridge" data-slide id={bridgeId}>
         <div className="melive-bridge-inner">
           <p className="section-index light">A SEGUIR</p>
           <h2>

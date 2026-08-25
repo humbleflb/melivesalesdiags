@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MeliveIntro } from "../components/MeliveIntro";
 import { SiteFooter } from "../components/SiteFooter";
+import { SlideKeyboardNav } from "../components/SlideKeyboardNav";
 
 const assets = [
   "Especialização em indústrias, distribuidoras e operações de atacado",
@@ -187,6 +188,8 @@ export const metadata: Metadata = {
 export default function SellenttPage() {
   return (
     <main>
+      <SlideKeyboardNav />
+
       <MeliveIntro
         clientName="Sellentt"
         bridgeId="diagnostico-sellentt"
@@ -194,7 +197,7 @@ export default function SellenttPage() {
         bridgeLead="A partir daqui, a leitura externa da experiência digital da Sellentt — hipóteses, oportunidades e um piloto recomendado para simplificar a decisão comercial."
       />
 
-      <section className="hero diagnosis-hero" id="mapa">
+      <section className="hero diagnosis-hero" data-slide id="mapa">
         <div className="hero-lines" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow">
@@ -228,7 +231,7 @@ export default function SellenttPage() {
         </div>
       </section>
 
-      <section className="summary section" id="diagnostico">
+      <section className="summary section" data-slide id="diagnostico">
         <div className="section-index">00 / VISÃO GERAL</div>
         <div className="summary-grid">
           <h2>
@@ -278,7 +281,7 @@ export default function SellenttPage() {
         </div>
       </section>
 
-      <section className="split-section section" id="ativos">
+      <section className="split-section section" data-slide id="ativos">
         <div className="split-badge">✓</div>
         <div>
           <div className="section-index">01 / O QUE JÁ ESTÁ BEM</div>
@@ -305,7 +308,7 @@ export default function SellenttPage() {
       </section>
 
       <section className="opportunity-section">
-        <div className="section intro-section">
+        <div className="section intro-section" data-slide id="oportunidades">
           <div className="section-index light">02 a 04 / OPORTUNIDADES</div>
           <h2>
             Três frentes para
@@ -320,6 +323,8 @@ export default function SellenttPage() {
         {opportunities.map((item, index) => (
           <article
             className={`opportunity ${index % 2 ? "reverse" : ""}`}
+            data-slide
+            id={`oportunidade-${item.number}`}
             key={item.number}
           >
             <div className="opportunity-visual">
@@ -353,7 +358,7 @@ export default function SellenttPage() {
         ))}
       </section>
 
-      <section className="split-section section" id="desafios">
+      <section className="split-section section" data-slide id="desafios">
         <div className="split-badge">?</div>
         <div>
           <div className="section-index">PORTAS DE ENTRADA</div>
@@ -380,7 +385,7 @@ export default function SellenttPage() {
         </div>
       </section>
 
-      <section className="split-section section" id="piloto">
+      <section className="split-section section" data-slide id="piloto">
         <div className="split-badge">+</div>
         <div>
           <div className="section-index">PILOTO RECOMENDADO</div>
@@ -421,7 +426,7 @@ export default function SellenttPage() {
         </div>
       </section>
 
-      <section className="priority-section section" id="prioridades">
+      <section className="priority-section section" data-slide id="prioridades">
         <div className="section-index light">MATRIZ DE DECISÃO</div>
         <div className="priority-head">
           <h2>
@@ -477,7 +482,7 @@ export default function SellenttPage() {
         </div>
       </section>
 
-      <section className="next-section" id="proximos-passos">
+      <section className="next-section" data-slide id="proximos-passos">
         <div className="next-shape" aria-hidden="true" />
         <div className="next-copy">
           <div className="section-index">COMO A MELIVE ENTRA</div>

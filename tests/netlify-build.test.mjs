@@ -65,6 +65,11 @@ test("Sellentt diagnosis lives at /sellentt", async () => {
   assert.match(page, /Sellentt/);
   assert.match(page, /força de vendas/i);
   assert.match(page, /Analisar minha operação/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.match(page, /data-slide/);
+  assert.match(page, /id=\{`oportunidade-\$\{item\.number\}`\}/);
+  assert.match(page, /id="mapa"/);
+  assert.match(page, /id="prioridades"/);
   assert.doesNotMatch(page, /href=["']\/["']/);
 });
 
