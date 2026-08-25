@@ -42,4 +42,14 @@ export const clients: ClientWork[] = [
     year: "2026",
     kind: "Proposta",
   },
+  {
+    slug: "sellentt",
+    name: "Sellentt",
+    sector: "Gestão comercial B2B",
+    summary:
+      "Clareza, direcionamento e conversão na jornada digital de indústrias e distribuidoras.",
+    href: "/sellentt",
+    year: "2026",
+    kind: "Diagnóstico",
+  },
 ];

@@ -51,11 +51,21 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /slug: "zetti"/);
   assert.match(catalog, /slug: "trinio"/);
   assert.match(catalog, /slug: "recursim"/);
+  assert.match(catalog, /slug: "sellentt"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
+  assert.match(catalog, /href: "\/sellentt"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
   assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
+});
+
+test("Sellentt diagnosis lives at /sellentt", async () => {
+  const page = await readFile(path.join(root, "app/sellentt/page.tsx"), "utf8");
+  assert.match(page, /Sellentt/);
+  assert.match(page, /força de vendas/i);
+  assert.match(page, /Analisar minha operação/);
+  assert.doesNotMatch(page, /href=["']\/["']/);
 });
 
 test("Zetti diagnosis lives at /zetti", async () => {
