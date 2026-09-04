@@ -1367,6 +1367,7 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-metric-grid article {
   background: var(--paper);
+  color: var(--ink);
   padding: 16px 14px;
   font-size: 14px;
   font-weight: 800;
