@@ -1373,6 +1373,15 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   font-weight: 800;
   border-top: 4px solid var(--green);
 }
+.deck-ink .deck-metric-grid article,
+.deck-green .deck-metric-grid article,
+.deck-yellow .deck-metric-grid article,
+.deck-ink .deck-theme-grid article,
+.deck-green .deck-theme-grid article,
+.deck-ink .journeys article,
+.deck-green .journeys article {
+  color: var(--ink);
+}
 
 .deck-price-row {
   display: grid;
