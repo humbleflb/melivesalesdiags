@@ -436,11 +436,11 @@ blockquote { margin: 32px 0; padding: 24px 28px; border-left: 6px solid var(--ye
 .split-badge { width: 56px; height: 56px; border-radius: 50%; background: var(--yellow); display: grid; place-items: center; font-size: 34px; font-weight: 900; }
 .split-copy > p { margin-top: 0; font-size: 20px; max-width: 700px; }
 .journeys { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 38px; }
-.journeys article { padding: 26px; background: var(--paper); border-top: 6px solid var(--green); }
+.journeys article { padding: 26px; background: var(--paper); color: var(--ink); border-top: 6px solid var(--green); }
 .journeys article:last-child { border-color: var(--yellow); }
-.journeys small { font-weight: 900; letter-spacing: .09em; }
-.journeys h3 { font-size: 26px; line-height: 1.05; margin: 17px 0; }
-.journeys p { font-size: 14px; }
+.journeys small { font-weight: 900; letter-spacing: .09em; color: var(--ink); }
+.journeys h3 { font-size: 26px; line-height: 1.05; margin: 17px 0; color: var(--ink); }
+.journeys p { font-size: 14px; color: var(--ink); }
 .sellentt-assets article { padding: 18px 20px; }
 .sellentt-assets article:nth-child(even) { border-color: var(--yellow); }
 .sellentt-assets article:last-child { border-color: var(--green); }
@@ -1319,6 +1319,7 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-theme-grid article {
   background: var(--paper);
+  color: var(--ink);
   padding: 22px 18px;
   font-weight: 800;
   font-size: 15px;
@@ -1366,10 +1367,26 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-metric-grid article {
   background: var(--paper);
+  color: var(--ink);
   padding: 16px 14px;
   font-size: 14px;
   font-weight: 800;
   border-top: 4px solid var(--green);
+}
+.deck-ink .deck-metric-grid article,
+.deck-green .deck-metric-grid article,
+.deck-yellow .deck-metric-grid article,
+.deck-ink .deck-theme-grid article,
+.deck-green .deck-theme-grid article,
+.deck-ink .journeys article,
+.deck-green .journeys article,
+.deck-ink .journeys article small,
+.deck-ink .journeys article h3,
+.deck-ink .journeys article p,
+.deck-green .journeys article small,
+.deck-green .journeys article h3,
+.deck-green .journeys article p {
+  color: var(--ink) !important;
 }
 
 .deck-price-row {
