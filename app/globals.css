@@ -1343,6 +1343,21 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 .deck-months h3 { margin: 10px 0 16px; font-size: 32px; color: var(--ink); }
 .deck-months ul { margin: 0; padding-left: 18px; }
 .deck-months li { margin: 6px 0; font-size: 14px; }
+.deck-months p { margin: 0; font-size: 14px; line-height: 1.45; }
+.deck-block-gap { margin-top: 28px; }
+.deck-mini-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.deck-mini-list li {
+  padding: 8px 0;
+  border-top: 1px solid rgba(47, 47, 48, .14);
+  font-size: 13px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.deck-mini-list li:first-child { border-top: 0; padding-top: 0; }
 
 .deck-metric-grid {
   display: grid;

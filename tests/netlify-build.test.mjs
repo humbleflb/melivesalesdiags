@@ -52,10 +52,12 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /slug: "trinio"/);
   assert.match(catalog, /slug: "recursim"/);
   assert.match(catalog, /slug: "sellentt"/);
+  assert.match(catalog, /slug: "firstdollar"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
   assert.match(catalog, /href: "\/sellentt"/);
+  assert.match(catalog, /href: "\/firstdollar"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
   assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
 });
@@ -162,4 +164,26 @@ test("RecurSIM proposal lives at /recursim with slide keyboard nav", async () =>
   assert.match(nav, /PageDown/);
   assert.match(nav, /scrollIntoView/);
   assert.match(nav, /event\.preventDefault/);
+});
+
+test("First Dollar proposal lives at /firstdollar with slide keyboard nav", async () => {
+  const page = await readFile(
+    path.join(root, "app/firstdollar/page.tsx"),
+    "utf8",
+  );
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(catalog, /slug: "firstdollar"/);
+  assert.match(catalog, /href: "\/firstdollar"/);
+  assert.match(page, /First Dollar/);
+  assert.match(page, /2,450/);
+  assert.match(page, /6,500/);
+  assert.match(page, /Recruitment/);
+  assert.match(page, /Explorers/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    18,
+    "expected 18 slide anchors on /firstdollar",
+  );
+  assert.doesNotMatch(page, /href=["']\/["']/);
 });

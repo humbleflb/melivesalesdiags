@@ -52,4 +52,14 @@ export const clients: ClientWork[] = [
     year: "2026",
     kind: "Diagnóstico",
   },
+  {
+    slug: "firstdollar",
+    name: "First Dollar",
+    sector: "Side hustle · EUA",
+    summary:
+      "Recrutamento e validação de mercado nos EUA, com opção de evolução do produto.",
+    href: "/firstdollar",
+    year: "2026",
+    kind: "Proposta",
+  },
 ];
