@@ -8,6 +8,8 @@
   # This is vinext + Nitro, not Next.js. Netlify may auto-enable
   # @netlify/plugin-nextjs (UI) because of the `next` dependency; skip it.
   NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Bump to force a clean deploy-preview rebuild when CI stalls.
+  MELIVE_DEPLOY_BUMP = "2026-09-04-contrast"
 
 # Nitro writes the SSR handler under .netlify/functions-internal/ during build.
 # Static files in dist/ are served first; unmatched routes hit the server function.
