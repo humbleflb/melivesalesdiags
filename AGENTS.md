@@ -2,17 +2,33 @@
 
 ## Cursor Cloud specific instructions
 
-Single-app vinext (Next.js-on-Vite) diagnostic landing page for **Vinta Software** / Melive (same visual system as prior client diagnoses; copy lives in `app/page.tsx`). **Production target: Netlify** via Nitro. No Docker/DB server required locally.
+Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial proposals. **Root `/` lists every client.** Each client lives on its own route (`/zetti`, `/trinio`, …) on the **same branch** — do not create a new git branch per client.
+
+### Routes
+
+- `/` — client menu (`app/page.tsx`), catalog in `app/clients.ts`
+- `/zetti` — Zetti diagnosis (`app/zetti/page.tsx`)
+- `/zetti/proposta` — Zetti commercial proposal (`app/zetti/proposta/`)
+- `/trinio` — Trinio diagnosis (`app/trinio/page.tsx`)
+- `/trinio/proposta` — Trinio commercial proposal / pilot (`app/trinio/proposta/page.tsx`); deck with slide nav
+- `/recursim` — RecurSIM acquisition proposal (`app/recursim/page.tsx`); Page Down/Up jumps between slides
+- `/sellentt` — Sellentt digital journey diagnosis (`app/sellentt/page.tsx`)
+- `/firstdollar` — First Dollar commercial proposal (`app/firstdollar/page.tsx`); Page Down/Up between slides
+- `/proposta` — redirect to `/zetti/proposta`
+
+Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.
+
+To add a client: create `app/<slug>/page.tsx`, register it in `app/clients.ts`.
 
 ### Commands
 
 See `package.json` / `README-CURSOR.md`. In practice:
 
 - **Dev:** `npm run dev` → `http://localhost:5173/` (`0.0.0.0`)
-- **Lint:** `npm run lint` (existing `@next/next/no-img-element` warnings in `app/page.tsx` are OK)
+- **Lint:** `npm run lint` (existing `@next/next/no-img-element` warnings are OK)
 - **Build (Netlify):** `npm run build` → sets `NITRO_PRESET=netlify` locally; on Netlify CI Nitro auto-detects
 - **Local Node prod smoke:** `npm start` rebuilds with `NITRO_PRESET=node` and runs `.output/server/index.mjs` (`vite preview` does not work with the Netlify preset)
-- **Test:** `npm test` = Netlify build + `tests/netlify-build.test.mjs`
+- **Test:** `npm test` = Netlify build + `tests/netlify-build.test.mjs` + PPTX checks
 
 ### Netlify
 
@@ -20,6 +36,11 @@ See `package.json` / `README-CURSOR.md`. In practice:
 - Nitro emits serverless functions under `.netlify/functions-internal/` (gitignored; created at build time)
 - Do **not** use `@netlify/plugin-nextjs` (UI or toml). This app is vinext/Nitro; that plugin looks for `.next` and fails. `NETLIFY_NEXT_PLUGIN_SKIP=true` is set in `netlify.toml`; also uninstall the plugin in Netlify UI if it was auto-enabled.
 - Do **not** use the Cloudflare/`vinext deploy` path for this project
+
+### Rules
+
+- **No links in diagnosis/proposal footers.** The footer must never contain links to `/`, other routes, or any external URL. Presentations are often shared as PDF; internal navigation links must not leak to clients. Close the presentation content and end — no link back to the hub.
+- **No visible "Page Down" hint badge.** Keyboard navigation exists but must not show a visible tooltip/chip on the page (the progress bar is OK).
 
 ### Gotchas
 

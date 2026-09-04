@@ -1,6 +1,6 @@
-# Diagnóstico Vinta Software — Melive
+# Propostas Melive
 
-Projeto-fonte da página de diagnóstico criada para a Vinta Software.
+Hub de diagnósticos e propostas comerciais. A raiz lista os clientes; cada trabalho vive em uma rota (`/zetti`, `/trinio`).
 
 ## Abrir no Cursor
 
@@ -31,7 +31,9 @@ npm run build
 
 ## Arquivos principais
 
-- `app/page.tsx`: conteúdo e estrutura da página.
+- `app/page.tsx`: menu de clientes.
+- `app/clients.ts`: catálogo (slug, nome, rotas).
+- `app/<cliente>/page.tsx`: diagnóstico daquele cliente.
 - `app/globals.css`: identidade visual, layout e responsividade.
 - `public/melive-logo.png`: logo utilizada na página.
 
