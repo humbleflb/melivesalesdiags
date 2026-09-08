@@ -591,12 +591,12 @@ export default function FirstDollarPage() {
             <div className="journeys deck-block-gap">
               <article>
                 <small>META ADS</small>
-                <h3>US$ 1,200–1,800</h3>
+                <h3>US$ 600–900</h3>
                 <p>Verba recomendada para aquisição.</p>
               </article>
               <article>
                 <small>INCENTIVO</small>
-                <h3>US$ 75</h3>
+                <h3>US$ 37.50</h3>
                 <p>Por participação concluída.</p>
               </article>
             </div>

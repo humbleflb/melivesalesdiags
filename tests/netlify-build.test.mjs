@@ -177,6 +177,8 @@ test("First Dollar proposal lives at /firstdollar with slide keyboard nav", asyn
   assert.match(page, /First Dollar/);
   assert.match(page, /2,450/);
   assert.match(page, /6,500/);
+  assert.match(page, /US\$ 600–900/);
+  assert.match(page, /US\$ 37\.50/);
   assert.match(page, /Recruitment/);
   assert.match(page, /Explorers/);
   assert.match(page, /SlideKeyboardNav/);
