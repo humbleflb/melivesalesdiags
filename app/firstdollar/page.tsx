@@ -212,17 +212,17 @@ const timeline = [
     text: "Screener, landing page, mensuração, criativos e configuração da campanha.",
   },
   {
-    phase: "Semanas 3–4",
+    phase: "Semanas 3–6",
     title: "Aquisição",
     text: "Triagem, otimização, seleção e agendamento dos participantes.",
   },
   {
-    phase: "Semanas 5–6",
+    phase: "Semanas 7–10",
     title: "Validação",
     text: "Focus groups, testes individuais, análise e recomendações.",
   },
   {
-    phase: "Semanas 7–10",
+    phase: "Semanas 11–14",
     title: "Evolução · P2",
     text: "Priorização, desenvolvimento, QA, publicação e nova rodada de validação.",
   },
@@ -231,7 +231,11 @@ const timeline = [
 const conditions = [
   {
     title: "Proposta 1",
-    items: ["50% na aprovação", "50% antes da entrega do relatório final"],
+    items: [
+      "1/3 na aprovação",
+      "1/3 no início da aquisição",
+      "1/3 na entrega do relatório",
+    ],
   },
   {
     title: "Proposta 2",
@@ -526,12 +530,12 @@ export default function FirstDollarPage() {
               <p>
                 US$ <b>2,450</b>
               </p>
-              <span>condição especial · First Dollar</span>
+              <span>à vista · ou 3x de US$ 816.67</span>
             </article>
             <article>
               <small>PRAZO</small>
               <p>
-                <b>6</b>
+                <b>10</b>
               </p>
               <span>semanas estimadas</span>
             </article>
@@ -631,7 +635,7 @@ export default function FirstDollarPage() {
             <article>
               <small>PRAZO</small>
               <p>
-                <b>8–10</b>
+                <b>12–14</b>
               </p>
               <span>semanas estimadas</span>
             </article>
@@ -699,7 +703,7 @@ export default function FirstDollarPage() {
           </h2>
           <div className="journeys deck-block-gap">
             <article>
-              <small>PROPOSTA 1 · US$ 2,450 · 6 SEMANAS</small>
+              <small>PROPOSTA 1 · US$ 2,450 · 10 SEMANAS</small>
               <h3>Recruitment &amp; Validation</h3>
               <p>
                 Indicada para validar mercado, público, comunicação e experiência
@@ -709,7 +713,7 @@ export default function FirstDollarPage() {
               </p>
             </article>
             <article>
-              <small>PROPOSTA 2 · US$ 6,500 · 8–10 SEMANAS</small>
+              <small>PROPOSTA 2 · US$ 6,500 · 12–14 SEMANAS</small>
               <h3>Validation &amp; Evolution</h3>
               <p>
                 Indicada para transformar aprendizados em melhorias reais.
@@ -726,8 +730,8 @@ export default function FirstDollarPage() {
         <div className="deck-inner">
           <p className="section-index">15 / CRONOGRAMA</p>
           <h2>
-            Seis semanas de validação.
-            <em> Até dez com evolução.</em>
+            Dez semanas de validação.
+            <em> Até quatorze com evolução.</em>
           </h2>
           <div className="deck-months">
             {timeline.map((item) => (
@@ -756,7 +760,7 @@ export default function FirstDollarPage() {
             {conditions.map((block) => (
               <article key={block.title}>
                 <small>{block.title}</small>
-                <h3>{block.title === "Proposta 1" ? "2 parcelas" : "3 parcelas"}</h3>
+                <h3>3 parcelas</h3>
                 <ul className="deck-mini-list">
                   {block.items.map((item) => (
                     <li key={item}>{item}</li>
