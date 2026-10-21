@@ -14,6 +14,7 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/recursim` — RecurSIM acquisition proposal (`app/recursim/page.tsx`); Page Down/Up jumps between slides
 - `/sellentt` — Sellentt digital journey diagnosis (`app/sellentt/page.tsx`)
 - `/firstdollar` — First Dollar commercial proposal (`app/firstdollar/page.tsx`); Page Down/Up between slides
+- `/ngb` — NGB Arquitetura commercial proposal (`app/ngb/page.tsx`); Page Down/Up between slides
 - `/proposta` — redirect to `/zetti/proposta`
 
 Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.

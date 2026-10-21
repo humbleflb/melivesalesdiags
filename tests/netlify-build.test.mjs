@@ -53,11 +53,13 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /slug: "recursim"/);
   assert.match(catalog, /slug: "sellentt"/);
   assert.match(catalog, /slug: "firstdollar"/);
+  assert.match(catalog, /slug: "ngb"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
   assert.match(catalog, /href: "\/sellentt"/);
   assert.match(catalog, /href: "\/firstdollar"/);
+  assert.match(catalog, /href: "\/ngb"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
   assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
 });
@@ -184,6 +186,25 @@ test("First Dollar proposal lives at /firstdollar with slide keyboard nav", asyn
     (page.match(/data-slide/g) ?? []).length,
     18,
     "expected 18 slide anchors on /firstdollar",
+  );
+  assert.doesNotMatch(page, /href=["']\/["']/);
+});
+
+test("NGB proposal lives at /ngb with slide keyboard nav", async () => {
+  const page = await readFile(path.join(root, "app/ngb/page.tsx"), "utf8");
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(catalog, /slug: "ngb"/);
+  assert.match(catalog, /href: "\/ngb"/);
+  assert.match(page, /NGB Arquitetura/);
+  assert.match(page, /1\.800/);
+  assert.match(page, /2\.200/);
+  assert.match(page, /Google Ads/);
+  assert.match(page, /GEO/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    18,
+    "expected 18 slide anchors on /ngb",
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
 });
