@@ -62,4 +62,14 @@ export const clients: ClientWork[] = [
     year: "2026",
     kind: "Proposta",
   },
+  {
+    slug: "ngb",
+    name: "NGB Arquitetura",
+    sector: "Arquitetura",
+    summary:
+      "Novo site institucional, portfólio autônomo e aquisição via Google Ads.",
+    href: "/ngb",
+    year: "2026",
+    kind: "Proposta",
+  },
 ];
