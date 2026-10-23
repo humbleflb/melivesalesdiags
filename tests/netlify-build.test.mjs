@@ -219,13 +219,14 @@ test("Fershop strategic scope lives at /fershop with slide keyboard nav", async 
   assert.match(catalog, /href: "\/fershop"/);
   assert.match(page, /Fershop/);
   assert.match(page, /Baden Powell/);
-  assert.match(page, /R\$ 4\.000/);
   assert.match(page, /Escopo estratégico/);
   assert.match(page, /SlideKeyboardNav/);
+  assert.doesNotMatch(page, /R\$/);
+  assert.doesNotMatch(page, /id="verba"/);
   assert.equal(
     (page.match(/data-slide/g) ?? []).length,
-    19,
-    "expected 19 slide anchors on /fershop",
+    18,
+    "expected 18 slide anchors on /fershop",
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
 });
