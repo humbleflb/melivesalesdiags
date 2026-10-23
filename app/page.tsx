@@ -40,7 +40,7 @@ export default function HubPage() {
             <em> Um caminho por marca.</em>
           </h2>
           <p>
-            {clients.length} propostas ativas. Novos clientes entram como rota,
+            {clients.length} trabalhos ativos. Novos clientes entram como rota,
             não como branch.
           </p>
         </div>
