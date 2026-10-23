@@ -437,19 +437,19 @@ export default function FirstDollarPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-green" data-slide id="recrutamento">
+      <section className="deck-slide deck-cream" data-slide id="recrutamento">
         <div className="deck-inner">
-          <p className="section-index light">06 / ESTRATÉGIA DE RECRUTAMENTO</p>
+          <p className="section-index">06 / ESTRATÉGIA DE RECRUTAMENTO</p>
           <h2>
             Meta Ads como canal principal.
             <em> Painéis e comunidades como complemento.</em>
           </h2>
-          <p className="hero-lead cream-text">
+          <p className="hero-lead">
             A campanha convida a uma pesquisa remunerada sobre um produto
             digital de descoberta e construção de renda adicional — sem
             promessas de ganhos financeiros.
           </p>
-          <ul className="deck-check light two-col">
+          <ul className="deck-check two-col">
             {adHighlights.map((item, index) => (
               <li key={item}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -462,7 +462,7 @@ export default function FirstDollarPage() {
               <article key={item}>{item}</article>
             ))}
           </div>
-          <p className="deck-foot cream-text">
+          <p className="deck-foot">
             LinkedIn Ads não é canal principal nesta etapa: custo e segmentação
             mais adequados a B2B. O First Dollar precisa alcançar consumidores
             em diferentes situações profissionais e econômicas.
@@ -490,9 +490,9 @@ export default function FirstDollarPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-ink" data-slide id="metricas">
+      <section className="deck-slide deck-cream" data-slide id="metricas">
         <div className="deck-inner">
-          <p className="section-index light">08 / MÉTRICAS DA OPERAÇÃO</p>
+          <p className="section-index">08 / MÉTRICAS DA OPERAÇÃO</p>
           <h2>
             O norte não é volume de leads.
             <em> É decisão melhor.</em>
@@ -502,7 +502,7 @@ export default function FirstDollarPage() {
               <article key={item}>{item}</article>
             ))}
           </div>
-          <p className="deck-foot cream-text">
+          <p className="deck-foot">
             O principal indicador será a capacidade de encontrar usuários
             representativos e gerar decisões melhores para o First Dollar.
           </p>
@@ -690,9 +690,9 @@ export default function FirstDollarPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-ink" data-slide id="comparativo">
+      <section className="deck-slide deck-paper" data-slide id="comparativo">
         <div className="deck-inner">
-          <p className="section-index light">14 / COMPARATIVO</p>
+          <p className="section-index">14 / COMPARATIVO</p>
           <h2>
             Validar primeiro
             <em> ou validar e evoluir.</em>
