@@ -6,7 +6,7 @@ export type ClientWork = {
   href: string;
   proposalHref?: string;
   year: string;
-  kind: "Diagnóstico" | "Proposta";
+  kind: "Diagnóstico" | "Proposta" | "Escopo";
 };
 
 export const clients: ClientWork[] = [
@@ -71,5 +71,15 @@ export const clients: ClientWork[] = [
     href: "/ngb",
     year: "2026",
     kind: "Proposta",
+  },
+  {
+    slug: "fershop",
+    name: "Fershop",
+    sector: "Materiais e ferramentas",
+    summary:
+      "Escopo de mídia paga para gerar fluxo qualificado na nova loja de Campinas.",
+    href: "/fershop",
+    year: "2026",
+    kind: "Escopo",
   },
 ];

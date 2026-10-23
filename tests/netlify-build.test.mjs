@@ -54,12 +54,14 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /slug: "sellentt"/);
   assert.match(catalog, /slug: "firstdollar"/);
   assert.match(catalog, /slug: "ngb"/);
+  assert.match(catalog, /slug: "fershop"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
   assert.match(catalog, /href: "\/sellentt"/);
   assert.match(catalog, /href: "\/firstdollar"/);
   assert.match(catalog, /href: "\/ngb"/);
+  assert.match(catalog, /href: "\/fershop"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
   assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
 });
@@ -205,6 +207,25 @@ test("NGB proposal lives at /ngb with slide keyboard nav", async () => {
     (page.match(/data-slide/g) ?? []).length,
     18,
     "expected 18 slide anchors on /ngb",
+  );
+  assert.doesNotMatch(page, /href=["']\/["']/);
+});
+
+test("Fershop strategic scope lives at /fershop with slide keyboard nav", async () => {
+  const page = await readFile(path.join(root, "app/fershop/page.tsx"), "utf8");
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(catalog, /slug: "fershop"/);
+  assert.match(catalog, /kind: "Escopo"/);
+  assert.match(catalog, /href: "\/fershop"/);
+  assert.match(page, /Fershop/);
+  assert.match(page, /Baden Powell/);
+  assert.match(page, /R\$ 4\.000/);
+  assert.match(page, /Escopo estratégico/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    19,
+    "expected 19 slide anchors on /fershop",
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
 });
