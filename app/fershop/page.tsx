@@ -208,27 +208,6 @@ const plan = [
   },
 ];
 
-const budgets = [
-  {
-    title: "Teste controlado",
-    total: "R$ 2.500",
-    split: "Google R$ 1.500 · Meta R$ 1.000",
-    text: "Validar procura, cobertura e mensagens prioritárias.",
-  },
-  {
-    title: "Operação recomendada",
-    total: "R$ 4.000",
-    split: "Google R$ 2.400 · Meta R$ 1.600",
-    text: "Dar volume ao aprendizado e cobrir mais categorias.",
-  },
-  {
-    title: "Aceleração local",
-    total: "R$ 6.000",
-    split: "Google R$ 3.600 · Meta R$ 2.400",
-    text: "Expandir alcance e testar novas frentes com maior velocidade.",
-  },
-];
-
 const measureLayers = [
   {
     title: "Negócio",
@@ -625,35 +604,9 @@ export default function FershopPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-paper" data-slide id="verba">
-        <div className="deck-inner">
-          <p className="section-index">13 / DISTRIBUIÇÃO DE MÍDIA</p>
-          <h2>
-            Ponto de partida:
-            <em> 60% Google, 40% Meta.</em>
-          </h2>
-          <div className="journeys deck-block-gap">
-            {budgets.map((item) => (
-              <article key={item.title}>
-                <small>{item.split}</small>
-                <h3>{item.title}</h3>
-                <p>
-                  <strong>{item.total}</strong> por mês. {item.text}
-                </p>
-              </article>
-            ))}
-          </div>
-          <p className="deck-foot">
-            A verba de mídia é paga diretamente às plataformas e não está
-            incluída nos honorários de gestão. A divisão será revista após o
-            primeiro ciclo: o orçamento acompanha a qualidade das ações.
-          </p>
-        </div>
-      </section>
-
       <section className="deck-slide deck-cream" data-slide id="mensuracao">
         <div className="deck-inner">
-          <p className="section-index">14 / MENSURAÇÃO</p>
+          <p className="section-index">13 / MENSURAÇÃO</p>
           <h2>
             Aproximar mídia
             <em> e movimento de loja.</em>
@@ -685,7 +638,7 @@ export default function FershopPage() {
 
       <section className="deck-slide deck-paper" data-slide id="rotina">
         <div className="deck-inner">
-          <p className="section-index">15 / ROTINA E RESPONSABILIDADES</p>
+          <p className="section-index">14 / ROTINA E RESPONSABILIDADES</p>
           <h2>
             Melive opera.
             <em> Fershop alimenta a loja.</em>
@@ -720,7 +673,7 @@ export default function FershopPage() {
 
       <section className="deck-slide deck-cream" data-slide id="escopo">
         <div className="deck-inner">
-          <p className="section-index">16 / ESCOPO</p>
+          <p className="section-index">15 / ESCOPO</p>
           <h2>
             O que entra
             <em> e o que fica de fora.</em>
@@ -750,7 +703,7 @@ export default function FershopPage() {
 
       <section className="deck-slide deck-paper" data-slide id="condicoes">
         <div className="deck-inner">
-          <p className="section-index">17 / CONDIÇÕES PARA INICIAR</p>
+          <p className="section-index">16 / CONDIÇÕES PARA INICIAR</p>
           <h2>
             Sem destino, mensuração
             <em> ou resposta, não ativa.</em>
