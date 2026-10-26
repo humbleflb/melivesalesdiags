@@ -16,6 +16,7 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/firstdollar` — First Dollar commercial proposal (`app/firstdollar/page.tsx`); Page Down/Up between slides
 - `/ngb` — NGB Arquitetura commercial proposal (`app/ngb/page.tsx`); Page Down/Up between slides
 - `/fershop` — Fershop paid-media strategic scope (`app/fershop/page.tsx`); Page Down/Up between slides
+- `/fershop/proposta` — Fershop Conecta commercial proposal (`app/fershop/proposta/page.tsx`); Page Down/Up between slides
 - `/proposta` — redirect to `/zetti/proposta`
 
 Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.

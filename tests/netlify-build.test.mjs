@@ -230,3 +230,26 @@ test("Fershop strategic scope lives at /fershop with slide keyboard nav", async 
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
 });
+
+test("Fershop Conecta proposal lives at /fershop/proposta", async () => {
+  const page = await readFile(
+    path.join(root, "app/fershop/proposta/page.tsx"),
+    "utf8",
+  );
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(catalog, /proposalHref: "\/fershop\/proposta"/);
+  assert.match(page, /Fershop Conecta/);
+  assert.doesNotMatch(page, /Fairshop/);
+  assert.match(page, /24\.900/);
+  assert.match(page, /1\.890/);
+  assert.match(page, /9\.960/);
+  assert.match(page, /WhatsApp/);
+  assert.match(page, /SlideKeyboardNav/);
+  assert.equal(
+    (page.match(/data-slide/g) ?? []).length,
+    19,
+    "expected 19 slide anchors on /fershop/proposta",
+  );
+  assert.doesNotMatch(page, /href=["']\/["']/);
+  assert.doesNotMatch(page, /utm_source=chatgpt/);
+});

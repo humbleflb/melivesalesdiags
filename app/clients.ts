@@ -77,8 +77,9 @@ export const clients: ClientWork[] = [
     name: "Fershop",
     sector: "Materiais e ferramentas",
     summary:
-      "Escopo de mídia paga para gerar fluxo qualificado na nova loja de Campinas.",
+      "Mídia paga da loja de Campinas e proposta do Fershop Conecta no WhatsApp oficial.",
     href: "/fershop",
+    proposalHref: "/fershop/proposta",
     year: "2026",
     kind: "Escopo",
   },
