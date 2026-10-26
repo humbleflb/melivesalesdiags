@@ -1366,10 +1366,36 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 }
 .deck-metric-grid article {
   background: var(--paper);
+  color: var(--ink);
   padding: 16px 14px;
   font-size: 14px;
   font-weight: 800;
   border-top: 4px solid var(--green);
+}
+.deck-metric-grid small {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+.deck-metric-grid h3 {
+  margin: 8px 0 6px;
+  font-size: 26px;
+  line-height: 1;
+  color: var(--ink);
+}
+.deck-metric-grid p {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.35;
+  color: var(--ink);
 }
 
 .deck-price-row {
