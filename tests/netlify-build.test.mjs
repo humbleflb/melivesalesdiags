@@ -243,7 +243,11 @@ test("Fershop Conecta proposal lives at /fershop/proposta", async () => {
   assert.doesNotMatch(page, /Fairshop/);
   assert.match(page, /24\.900/);
   assert.match(page, /1\.890/);
-  assert.match(page, /9\.960/);
+  assert.match(page, /1\.037,50/);
+  assert.match(page, /30 dias corridos/);
+  assert.match(page, /24 meses/);
+  assert.doesNotMatch(page, /9\.960/);
+  assert.doesNotMatch(page, /7\.470/);
   assert.match(page, /WhatsApp/);
   assert.match(page, /SlideKeyboardNav/);
   assert.equal(
