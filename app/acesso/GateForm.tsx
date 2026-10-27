@@ -3,12 +3,12 @@
 import { useState, type FormEvent } from "react";
 
 export function GateForm() {
-  const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [pending, setPending] = useState(false);
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const password = String(new FormData(event.currentTarget).get("password") ?? "");
     setPending(true);
     setError(false);
     try {
@@ -50,10 +50,11 @@ export function GateForm() {
           type="password"
           name="password"
           autoComplete="current-password"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           autoFocus
           required
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
         />
       </label>
       <button className="button dark" type="submit" disabled={pending}>

@@ -275,6 +275,10 @@ test("shared password gate blocks project HTML until unlock", async () => {
   assert.match(proxy, /gate-token/);
   assert.match(api, /httpOnly:\s*true/);
   assert.match(api, /passwordMatches/);
+  assert.match(gate, /normalizePassword/);
+  assert.match(gate, /toLowerCase/);
+  assert.match(form, /FormData/);
+  assert.doesNotMatch(form, /value=\{password\}/);
   assert.doesNotMatch(acesso, new RegExp(password));
   assert.doesNotMatch(form, new RegExp(password));
   assert.match(acesso, /Acesso restrito/);
