@@ -1663,24 +1663,42 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 .gestao-section {
   margin: 0 clamp(24px, 7vw, 96px) 14px;
   background: var(--white);
-  padding: 22px 22px 8px;
+  padding: 0;
   border-top: 6px solid var(--green);
 }
-.gestao-section header {
+.gestao-section summary {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
   gap: 16px;
   align-items: start;
-  margin-bottom: 8px;
+  padding: 22px;
+  cursor: pointer;
+  list-style: none;
 }
+.gestao-section summary::-webkit-details-marker { display: none; }
+.gestao-section summary::marker { content: ""; }
 .gestao-section h2 { margin: 0; font-size: 32px; }
-.gestao-section header p { margin: 6px 0 0; font-size: 14px; }
-.gestao-section header > b {
+.gestao-section summary p { margin: 6px 0 0; font-size: 14px; }
+.gestao-section summary > b {
   font-family: Impact, "Arial Narrow", Arial, sans-serif;
   font-size: 22px;
   font-weight: 400;
   color: var(--green);
 }
+.gestao-chevron {
+  width: 12px;
+  height: 12px;
+  margin-top: 8px;
+  border-right: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  transform: rotate(45deg);
+  justify-self: end;
+}
+.gestao-section[open] .gestao-chevron {
+  margin-top: 14px;
+  transform: rotate(-135deg);
+}
+.gestao-section ul { padding: 0 22px 8px; }
 .gestao-section ul { list-style: none; margin: 0; padding: 0; }
 .gestao-task {
   display: grid;
@@ -1708,5 +1726,6 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
 @media (max-width: 800px) {
   .gestao-hero-row,
   .gestao-blockers,
-  .gestao-section header { grid-template-columns: 1fr; }
+  .gestao-section summary { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .gestao-section summary .section-index { grid-column: 1 / -1; }
 }

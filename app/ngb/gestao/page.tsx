@@ -65,13 +65,13 @@ export default function NgbGestaoPage() {
       </section>
 
       {sections.map((section, sectionIndex) => (
-        <section
+        <details
           className="gestao-section"
           key={section.number}
           data-gestao-section
           id={`etapa-${section.number}`}
         >
-          <header>
+          <summary>
             <p className="section-index">
               {section.number} / {section.owner}
             </p>
@@ -80,7 +80,8 @@ export default function NgbGestaoPage() {
               {section.note ? <p>{section.note}</p> : null}
             </div>
             <b data-gestao-section-count>0/{section.tasks.length}</b>
-          </header>
+            <span className="gestao-chevron" aria-hidden="true" />
+          </summary>
           <ul>
             {section.tasks.map((task, taskIndex) => {
               const id = taskId(sectionIndex, taskIndex);
@@ -94,7 +95,7 @@ export default function NgbGestaoPage() {
               );
             })}
           </ul>
-        </section>
+        </details>
       ))}
 
       <p className="gestao-save">

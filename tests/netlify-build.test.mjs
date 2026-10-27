@@ -302,6 +302,10 @@ test("NGB project management opens from the hub card", async () => {
   assert.match(menu, /hub-gestao/);
   assert.match(content, /Não iniciado/);
   assert.match(page, /data-gestao-blocker/);
+  assert.match(page, /<details/);
+  assert.match(page, /<summary>/);
+  assert.doesNotMatch(page, /<details[^>]*\sopen/);
+  assert.match(page, /gestao-chevron/);
   assert.match(content, /Identidade visual/);
   assert.match(content, /733,34/);
   assert.match(content, /733,33/);
