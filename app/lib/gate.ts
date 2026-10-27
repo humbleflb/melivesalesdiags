@@ -7,9 +7,13 @@ function digest(value: string) {
   return createHash("sha256").update(`melive-gate-v1:${value}`).digest();
 }
 
+export function normalizePassword(input: string) {
+  return input.normalize("NFKC").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
 export function passwordMatches(input: string) {
-  const candidate = digest(input);
-  const expected = digest(GATE_PASSWORD);
+  const candidate = digest(normalizePassword(input));
+  const expected = digest(normalizePassword(GATE_PASSWORD));
   return timingSafeEqual(candidate, expected);
 }
 
