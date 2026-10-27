@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HubGestaoMenu } from "./components/HubGestaoMenu";
 import { clients } from "./clients";
 
 export const metadata: Metadata = {
@@ -48,6 +49,9 @@ export default function HubPage() {
           {clients.map((client, index) => (
             <li key={client.slug}>
               <article className="hub-card">
+                {client.gestaoHref ? (
+                  <HubGestaoMenu href={client.gestaoHref} />
+                ) : null}
                 <div className="hub-card-meta">
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <small>{client.kind}</small>

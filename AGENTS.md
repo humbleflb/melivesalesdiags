@@ -15,6 +15,8 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/sellentt` — Sellentt digital journey diagnosis (`app/sellentt/page.tsx`)
 - `/firstdollar` — First Dollar commercial proposal (`app/firstdollar/page.tsx`); Page Down/Up between slides
 - `/ngb` — NGB Arquitetura commercial proposal (`app/ngb/page.tsx`); Page Down/Up between slides
+- `/ngb/gestao` — NGB project management (`app/ngb/gestao/page.tsx`); opened from the hub card via “Adicionar gestão”
+- `/acesso` — shared password gate. Every other HTML route rewrites here until the cookie is set (`proxy.ts`, `app/api/acesso/route.ts`)
 - `/fershop` — Fershop paid-media strategic scope (`app/fershop/page.tsx`); Page Down/Up between slides
 - `/fershop/proposta` — Fershop Conecta commercial proposal (`app/fershop/proposta/page.tsx`); Page Down/Up between slides
 - `/proposta` — redirect to `/zetti/proposta`
