@@ -654,12 +654,12 @@ export default function FershopConectaPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-ink" data-slide id="investimento">
+      <section className="deck-slide deck-ink deck-fit" data-slide id="investimento">
         <div className="deck-inner">
           <p className="section-index light">14 / METODOLOGIA 1</p>
           <h2>
-            Implantação e manutenção
-            <em> no mesmo contrato.</em>
+            Um contrato,
+            <em> com 24 meses.</em>
           </h2>
           <div className="deck-price-row">
             <article className="media-price">
@@ -693,12 +693,10 @@ export default function FershopConectaPage() {
             ))}
           </ul>
           <p className="deck-foot cream-text">
-            Os 24 meses cobrem suporte, alterações e gestão, no valor à vista ou
-            parcelado. Encerrado esse período, a operação é da Fershop e o
-            Conecta segue sem a Melive no dia a dia. Premissa inicial: até 10
-            lojas, até 30 vendedores, um número oficial, uma operação
-            administrativa, fluxos compartilhados, até dez templates e sem
-            integração complexa com ERP ou CRM externo.
+            À vista ou parcelado, os 24 meses incluem suporte, alterações e
+            gestão. Premissa: até 10 lojas, até 30 vendedores, um número
+            oficial, uma operação administrativa, fluxos compartilhados, até
+            dez templates e sem integração complexa com ERP ou CRM.
           </p>
         </div>
       </section>
@@ -740,18 +738,13 @@ export default function FershopConectaPage() {
         </div>
       </section>
 
-      <section className="deck-slide deck-cream" data-slide id="mensal">
+      <section className="deck-slide deck-cream deck-fit" data-slide id="mensal">
         <div className="deck-inner">
           <p className="section-index">16 / CONTRATO MENSAL</p>
           <h2>
             R$ 1.890
             <em> por 30 dias corridos.</em>
           </h2>
-          <p className="hero-lead">
-            Nesta forma, o mês pago é o mês de serviço. Enquanto os pagamentos
-            continuam, a Fershop segue com acesso. Quando o pagamento para, o
-            acesso encerra. A operação permanece com a Melive.
-          </p>
           <div className="journeys deck-block-gap">
             <article>
               <small>INCLUSO NA MENSALIDADE</small>
@@ -773,13 +766,11 @@ export default function FershopConectaPage() {
             </article>
           </div>
           <p className="deck-foot">
-            Cada mensalidade cobre o volume e a estrutura desta contratação por
-            30 dias corridos. Crescimento relevante pode pedir revisão da
-            infraestrutura. Tarifas da Meta, plataforma e consumo de
-            inteligência artificial ficam em contas separadas. Caixas
-            compartilhadas prontas podem custar cerca de US$ 149 por mês antes
-            das tarifas da Meta; este contrato cobre a operação, as integrações
-            e a manutenção própria enquanto o pagamento estiver em dia.
+            O acesso acompanha o pagamento e a operação permanece com a Melive.
+            Tarifas da Meta e o consumo de inteligência artificial ficam à parte.
+            Caixas prontas podem custar cerca de US$ 149 por mês antes das
+            tarifas da Meta; aqui, operação e manutenção própria valem pelo
+            período pago.
           </p>
         </div>
       </section>
