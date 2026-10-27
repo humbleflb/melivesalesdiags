@@ -1153,6 +1153,9 @@ footer p, footer a { font-size: 11px; text-transform: uppercase; letter-spacing:
   gap: 14px;
   margin-top: 42px;
 }
+.fershop-conecta .deck-cover-meta {
+  grid-template-columns: repeat(3, minmax(0, 230px));
+}
 .deck-cover-meta article {
   background: rgba(47, 47, 48, .08);
   padding: 16px 18px;
