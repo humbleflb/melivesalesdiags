@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import { constants } from "node:fs";
 import path from "node:path";
@@ -252,4 +253,60 @@ test("Fershop Conecta proposal lives at /fershop/proposta", async () => {
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
   assert.doesNotMatch(page, /utm_source=chatgpt/);
+});
+
+test("shared password gate blocks project HTML until unlock", async () => {
+  const proxy = await readFile(path.join(root, "proxy.ts"), "utf8");
+  const tokenFile = await readFile(path.join(root, "app/lib/gate-token.ts"), "utf8");
+  const gate = await readFile(path.join(root, "app/lib/gate.ts"), "utf8");
+  const api = await readFile(path.join(root, "app/api/acesso/route.ts"), "utf8");
+  const acesso = await readFile(path.join(root, "app/acesso/page.tsx"), "utf8");
+  const form = await readFile(path.join(root, "app/acesso/GateForm.tsx"), "utf8");
+  const password = gate.match(/GATE_PASSWORD = "([^"]+)"/)?.[1];
+  const token = tokenFile.match(/GATE_TOKEN =\s*"([^"]+)"/)?.[1];
+  assert.ok(password);
+  assert.equal(
+    createHash("sha256").update(`melive-gate-v1:${password}`).digest("hex"),
+    token,
+  );
+  assert.match(proxy, /NextResponse\.rewrite/);
+  assert.match(proxy, /\/acesso/);
+  assert.match(proxy, /GATE_TOKEN/);
+  assert.match(proxy, /gate-token/);
+  assert.match(api, /httpOnly:\s*true/);
+  assert.match(api, /passwordMatches/);
+  assert.doesNotMatch(acesso, new RegExp(password));
+  assert.doesNotMatch(form, new RegExp(password));
+  assert.match(acesso, /Acesso restrito/);
+});
+
+test("NGB project management opens from the hub card", async () => {
+  const hub = await readFile(path.join(root, "app/page.tsx"), "utf8");
+  const menu = await readFile(
+    path.join(root, "app/components/HubGestaoMenu.tsx"),
+    "utf8",
+  );
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  const page = await readFile(path.join(root, "app/ngb/gestao/page.tsx"), "utf8");
+  const content = await readFile(
+    path.join(root, "app/ngb/gestao/content.ts"),
+    "utf8",
+  );
+  assert.match(catalog, /gestaoHref: "\/ngb\/gestao"/);
+  assert.match(hub, /HubGestaoMenu/);
+  assert.match(menu, /Adicionar gestão/);
+  assert.match(menu, /hub-gestao/);
+  assert.match(content, /Não iniciado/);
+  assert.match(page, /data-gestao-blocker/);
+  assert.match(content, /Identidade visual/);
+  assert.match(content, /733,34/);
+  assert.match(content, /733,33/);
+  assert.match(content, /R\$ 400/);
+  assert.match(content, /Alberto Nagib/);
+  assert.match(content, /generate_lead/);
+  assert.equal((content.match(/number: "/g) ?? []).length, 14);
+  assert.doesNotMatch(page, /chatgpt-content-reference/);
+  assert.doesNotMatch(content, /chatgpt-content-reference/);
+  assert.doesNotMatch(page, /melive2026/);
+  assert.doesNotMatch(`${hub}\n${menu}`, /melive2026/);
 });

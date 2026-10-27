@@ -5,6 +5,7 @@ export type ClientWork = {
   summary: string;
   href: string;
   proposalHref?: string;
+  gestaoHref?: string;
   year: string;
   kind: "Diagnóstico" | "Proposta" | "Escopo";
 };
@@ -69,6 +70,7 @@ export const clients: ClientWork[] = [
     summary:
       "Novo site institucional, portfólio autônomo e aquisição via Google Ads.",
     href: "/ngb",
+    gestaoHref: "/ngb/gestao",
     year: "2026",
     kind: "Proposta",
   },
