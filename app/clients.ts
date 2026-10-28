@@ -82,6 +82,7 @@ export const clients: ClientWork[] = [
       "Mídia paga da loja de Campinas e proposta do Fershop Conecta no WhatsApp oficial.",
     href: "/fershop",
     proposalHref: "/fershop/proposta",
+    gestaoHref: "/fershop/gestao",
     year: "2026",
     kind: "Escopo",
   },

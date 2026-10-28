@@ -19,6 +19,7 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/acesso` — shared password gate. Every other HTML route rewrites here until the cookie is set (`proxy.ts`, `app/api/acesso/route.ts`)
 - `/fershop` — Fershop paid-media strategic scope (`app/fershop/page.tsx`); Page Down/Up between slides
 - `/fershop/proposta` — Fershop Conecta commercial proposal (`app/fershop/proposta/page.tsx`); Page Down/Up between slides
+- `/fershop/gestao` — Fershop 90-day paid-media management (`app/fershop/gestao/page.tsx`); opened from the hub card via “Adicionar gestão”
 - `/proposta` — redirect to `/zetti/proposta`
 
 Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.
