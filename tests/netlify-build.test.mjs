@@ -322,3 +322,37 @@ test("NGB project management opens from the hub card", async () => {
   assert.doesNotMatch(page, /melive2026/);
   assert.doesNotMatch(`${hub}\n${menu}`, /melive2026/);
 });
+
+test("Fershop project management opens from the hub card", async () => {
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  const page = await readFile(path.join(root, "app/fershop/gestao/page.tsx"), "utf8");
+  const content = await readFile(
+    path.join(root, "app/fershop/gestao/content.ts"),
+    "utf8",
+  );
+  const state = await readFile(
+    path.join(root, "app/fershop/gestao/GestaoState.tsx"),
+    "utf8",
+  );
+  assert.match(catalog, /gestaoHref: "\/fershop\/gestao"/);
+  assert.match(content, /Não iniciado/);
+  assert.match(content, /Baden Powell, 447/);
+  assert.match(content, /Contrato e responsáveis/);
+  assert.match(content, /Acessos e pagamento/);
+  assert.match(content, /Loja, oferta e mensuração/);
+  assert.match(content, /Google Ads/);
+  assert.match(content, /Meta Ads/);
+  assert.match(content, /Como conheceu a nova loja/);
+  assert.equal((content.match(/number: "/g) ?? []).length, 13);
+  assert.equal((content.match(/title: "Fora do escopo base"/g) ?? []).length, 1);
+  assert.match(page, /data-gestao-blocker/);
+  assert.match(page, /<details/);
+  assert.match(page, /<summary>/);
+  assert.doesNotMatch(page, /<details[^>]*\sopen/);
+  assert.match(page, /gestao-chevron/);
+  assert.match(state, /melive-gestao-fershop-v1/);
+  assert.doesNotMatch(state, /melive-gestao-ngb-v1/);
+  assert.doesNotMatch(page, /chatgpt-content-reference/);
+  assert.doesNotMatch(content, /chatgpt-content-reference/);
+  assert.doesNotMatch(`${page}\n${content}`, /melive2026/);
+});
