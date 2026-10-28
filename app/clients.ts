@@ -86,4 +86,14 @@ export const clients: ClientWork[] = [
     year: "2026",
     kind: "Escopo",
   },
+  {
+    slug: "bangalo",
+    name: "Bangalô",
+    sector: "Landing page e tráfego pago",
+    summary:
+      "Landing page de conversão e gestão de Google Ads e Meta Ads, com condição especial até 3 de novembro de 2026.",
+    href: "/bangalo",
+    year: "2026",
+    kind: "Proposta",
+  },
 ];

@@ -56,6 +56,7 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /slug: "firstdollar"/);
   assert.match(catalog, /slug: "ngb"/);
   assert.match(catalog, /slug: "fershop"/);
+  assert.match(catalog, /slug: "bangalo"/);
   assert.match(catalog, /href: "\/zetti"/);
   assert.match(catalog, /href: "\/trinio"/);
   assert.match(catalog, /href: "\/recursim"/);
@@ -63,6 +64,7 @@ test("hub lists allocated client proposals", async () => {
   assert.match(catalog, /href: "\/firstdollar"/);
   assert.match(catalog, /href: "\/ngb"/);
   assert.match(catalog, /href: "\/fershop"/);
+  assert.match(catalog, /href: "\/bangalo"/);
   assert.match(catalog, /proposalHref: "\/zetti\/proposta"/);
   assert.match(catalog, /proposalHref: "\/trinio\/proposta"/);
 });
@@ -257,6 +259,23 @@ test("Fershop Conecta proposal lives at /fershop/proposta", async () => {
   );
   assert.doesNotMatch(page, /href=["']\/["']/);
   assert.doesNotMatch(page, /utm_source=chatgpt/);
+});
+
+test("Bangalô commercial proposal lives at /bangalo", async () => {
+  const page = await readFile(path.join(root, "app/bangalo/page.tsx"), "utf8");
+  const catalog = await readFile(path.join(root, "app/clients.ts"), "utf8");
+  assert.match(catalog, /slug: "bangalo"[\s\S]*href: "\/bangalo"/);
+  assert.match(page, /Bangalô — Oziel/);
+  assert.match(page, /R\$ 980,00/);
+  assert.match(page, /R\$ 1\.150,00/);
+  assert.match(page, /R\$ 1\.400,00/);
+  assert.match(page, /R\$ 3\.130,00/);
+  assert.match(page, /R\$ 2\.150,00/);
+  assert.match(page, /3 de novembro de 2026/);
+  assert.match(page, /Google Ads/);
+  assert.match(page, /Meta Ads/);
+  assert.match(page, /não\s+está incluído nos honorários da Melive/);
+  assert.doesNotMatch(page, /href=["']\/["']/);
 });
 
 test("shared password gate blocks project HTML until unlock", async () => {
