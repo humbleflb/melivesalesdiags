@@ -331,7 +331,13 @@ test("Fershop project management opens from the hub card", async () => {
     "utf8",
   );
   const state = await readFile(
-    path.join(root, "app/fershop/gestao/GestaoState.tsx"),
+    path.join(root, "app/components/GestaoState.tsx"),
+    "utf8",
+  );
+  const ngbPage = await readFile(path.join(root, "app/ngb/gestao/page.tsx"), "utf8");
+  const api = await readFile(path.join(root, "app/api/gestao/route.ts"), "utf8");
+  const migration = await readFile(
+    path.join(root, "supabase/migrations/20261028182100_melive_gestao_checks.sql"),
     "utf8",
   );
   assert.match(catalog, /gestaoHref: "\/fershop\/gestao"/);
@@ -350,8 +356,17 @@ test("Fershop project management opens from the hub card", async () => {
   assert.match(page, /<summary>/);
   assert.doesNotMatch(page, /<details[^>]*\sopen/);
   assert.match(page, /gestao-chevron/);
-  assert.match(state, /melive-gestao-fershop-v1/);
-  assert.doesNotMatch(state, /melive-gestao-ngb-v1/);
+  assert.match(page, /GestaoState project="fershop"/);
+  assert.match(ngbPage, /GestaoState project="ngb"/);
+  assert.match(page, /todo mundo que entra com a senha/);
+  assert.match(state, /\/api\/gestao/);
+  assert.doesNotMatch(state, /localStorage\.setItem\(STORAGE_KEY/);
+  assert.match(api, /GATE_COOKIE/);
+  assert.match(api, /listChecks/);
+  assert.match(migration, /enable row level security/);
+  assert.match(migration, /melive_gestao_checks/);
+  assert.doesNotMatch(migration, /values \(1, '[0-9a-f]{32,}'\)/);
+  assert.doesNotMatch(`${page}\n${state}\n${api}`, /MELIVE_GESTAO_GATE=/);
   assert.doesNotMatch(page, /chatgpt-content-reference/);
   assert.doesNotMatch(content, /chatgpt-content-reference/);
   assert.doesNotMatch(`${page}\n${content}`, /melive2026/);
