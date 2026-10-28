@@ -20,6 +20,7 @@ Single-app vinext (Next.js-on-Vite) hub of Melive diagnoses and commercial propo
 - `/fershop` — Fershop paid-media strategic scope (`app/fershop/page.tsx`); Page Down/Up between slides
 - `/fershop/proposta` — Fershop Conecta commercial proposal (`app/fershop/proposta/page.tsx`); Page Down/Up between slides
 - `/fershop/gestao` — Fershop 90-day paid-media management (`app/fershop/gestao/page.tsx`); opened from the hub card via “Adicionar gestão”
+- `/api/gestao` — shared checklist state for every gestão page. Checks are stored in Supabase (`public.melive_gestao_checks`) and shown to anyone who passed the password gate. A new gestão page must set `gestaoHref` in `app/clients.ts` and render `<GestaoState project="<slug>" />`. Server env: `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `MELIVE_GESTAO_GATE` (never commit the values).
 - `/proposta` — redirect to `/zetti/proposta`
 
 Shared Melive intro: `app/components/MeliveIntro.tsx`. Visual system: `app/globals.css`. **Production target: Netlify** via Nitro.

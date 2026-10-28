@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "bash scripts/build-netlify.sh",
     "start": "env -u NETLIFY -u NETLIFY_LOCAL NITRO_PRESET=node vite build && node .output/server/index.mjs",
-    "test": "npm run build && node --test tests/netlify-build.test.mjs && npx --yes tsx --test tests/proposal-pptx.test.mjs",
+    "test": "npm run build && node --test tests/netlify-build.test.mjs && node --experimental-strip-types --test tests/gestao-input.test.mjs && npx --yes tsx --test tests/proposal-pptx.test.mjs",
     "lint": "bash scripts/sites-env.sh -- eslint .",
     "db:generate": "bash scripts/sites-env.sh -- drizzle-kit generate"
   },

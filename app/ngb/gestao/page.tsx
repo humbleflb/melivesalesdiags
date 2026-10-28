@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteFooter } from "../../components/SiteFooter";
-import { GestaoState } from "./GestaoState";
+import { GestaoState } from "../../components/GestaoState";
 import { blockers, dependencyNote, nextActions, projectStatus, sections, taskId, taskTotal } from "./content";
 
 export const metadata: Metadata = {
@@ -15,7 +15,7 @@ export default function NgbGestaoPage() {
 
   return (
     <main className="gestao">
-      <GestaoState />
+      <GestaoState project="ngb" />
       <header className="gestao-hero">
         <p className="eyebrow">
           <span>Gestão</span> NGB Arquitetura + Melive
@@ -98,9 +98,8 @@ export default function NgbGestaoPage() {
         </details>
       ))}
 
-      <p className="gestao-save">
-        Os checks ficam salvos neste navegador. A senha de acesso é a mesma da
-        biblioteca.
+      <p className="gestao-save" data-gestao-sync>
+        Os checks valem para todo mundo que entra com a senha.
       </p>
       <SiteFooter caption="Gestão do projeto • NGB Arquitetura • Outubro de 2026" />
     </main>
